@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="mb-6 inline-block">
               <div className="relative h-10 w-32">
                 <Image
-                  src="/placeholder.svg?height=80&width=240"
+                  src="/maxpo.png?height=80&width=240"
                   alt="Maxpo Logo"
                   fill
                   className="object-contain brightness-0 invert"

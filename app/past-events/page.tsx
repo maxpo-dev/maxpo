@@ -4,13 +4,10 @@ import { ArrowRight, Calendar, MapPin, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
 
 export default function PastEvents() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-20">
@@ -418,8 +415,6 @@ export default function PastEvents() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

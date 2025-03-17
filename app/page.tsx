@@ -4,7 +4,7 @@ import { ArrowRight, Globe, Lightbulb, Users, Building, Award, ChevronDown } fro
 
 import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+// import Footer from "@/app/components/footer"
 
 export default function Home() {
   return (
@@ -48,7 +48,7 @@ export default function Home() {
             </h2>
             <p className="mb-12 text-lg text-gray-600">
               For two decades, Maxpo has been at the forefront of the trade exhibition industry, creating transformative
-              business experiences. Over the past 15 years, we've expanded our expertise to international markets,
+              business experiences. Over the past 15 years, we&apos;ve expanded our expertise to international markets,
               delivering world-class exhibitions that drive growth, innovation, and lasting industry impact.
             </p>
           </div>
@@ -95,22 +95,22 @@ export default function Home() {
               </div>
               <div className="mt-12 space-y-4 text-gray-700">
                 <p className="text-lg italic">
-                  "At Maxpo, we don't just organize trade shows—we build platforms for progress. Our mission is to spark
-                  innovation, cultivate meaningful connections, and open new doors for businesses worldwide."
+                  &quot;At Maxpo, we don&apos;t just organize trade shows—we build platforms for progress. Our mission is to spark
+                  innovation, cultivate meaningful connections, and open new doors for businesses worldwide.&quot;
                 </p>
                 <p>
-                  "Every event we create is designed to empower industries, drive collaboration, and shape the future of
+                  &quot;Every event we create is designed to empower industries, drive collaboration, and shape the future of
                   global commerce. Our vision is to transform trade shows into catalysts for industry evolution, making
-                  them more than just networking spaces but powerful engines for innovation and global impact."
+                  them more than just networking spaces but powerful engines for innovation and global impact.&quot;
                 </p>
                 <p>
-                  "We see a world where exhibitions inspire breakthroughs, foster industry transformation, and generate
+                  &quot;We see a world where exhibitions inspire breakthroughs, foster industry transformation, and generate
                   lasting opportunities for businesses of all sizes. As we expand our global reach, our focus remains
-                  the same—delivering world-class experiences that fuel success and create value for every participant."
+                  the same—delivering world-class experiences that fuel success and create value for every participant.&quot;
                 </p>
                 <p className="text-lg font-medium">
-                  "Maxpo is where ideas take flight, industries converge, and businesses grow. We look forward to
-                  continuing this journey with you."
+                  &quot;Maxpo is where ideas take flight, industries converge, and businesses grow. We look forward to
+                  continuing this journey with you.&quot;
                 </p>
                 <p className="text-right font-semibold">— M. Inayat Sait, Chairman & Founder</p>
               </div>
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Our Essence: Why Choose Maxpo?</h2>
             <p className="mb-16 text-lg text-gray-300">
-              Maxpo isn't just about hosting trade shows—we build thriving business ecosystems that spark innovation,
+              Maxpo isn&apos;t just about hosting trade shows—we build thriving business ecosystems that spark innovation,
               foster powerful connections, and unlock global opportunities.
             </p>
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
               <h3 className="mb-4 text-xl font-semibold">Shaping the Future</h3>
               <p className="text-gray-400">
-                Innovation isn't a buzzword for us—it's our foundation. We curate events that showcase game-changing
+                Innovation isn&apos;t a buzzword for us—it&apos;s our foundation. We curate events that showcase game-changing
                 ideas, emerging trends, and transformative solutions to help industries evolve.
               </p>
             </div>
@@ -181,14 +181,14 @@ export default function Home() {
               </div>
               <h3 className="mb-4 text-xl font-semibold">Creating Limitless Possibilities</h3>
               <p className="text-gray-400">
-                Maxpo isn't just an event—it's a launchpad for success. Whether you're a startup or an industry giant,
+                Maxpo isn&apos;t just an event—it&apos;s a launchpad for success. Whether you&apos;re a startup or an industry giant,
                 we provide the platform, exposure, and connections to turn ambitions into achievements.
               </p>
             </div>
 
             <div className="flex items-center justify-center rounded-2xl bg-white p-8 text-center text-black">
               <p className="text-xl font-semibold italic">
-                Maxpo isn't just where industries meet—it's where they grow, evolve, and redefine the future.
+                Maxpo isn&apos;t just where industries meet—it&apos;s where they grow, evolve, and redefine the future.
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function Home() {
               <div>
                 <h3 className="mb-2 text-xl font-semibold">Staying Ahead, Always</h3>
                 <p className="text-gray-600">
-                  We operate in a world that's constantly evolving, and we embrace that change. Our team stays ahead of
+                  We operate in a world that&apos;s constantly evolving, and we embrace that change. Our team stays ahead of
                   industry trends, new technologies, and market shifts to ensure our events remain relevant, impactful,
                   and future-focused.
                 </p>
@@ -229,7 +229,7 @@ export default function Home() {
               <div>
                 <h3 className="mb-2 text-xl font-semibold">Exceeding Expectations, Every Time</h3>
                 <p className="text-gray-600">
-                  At Maxpo, we don't settle for average. Whether it's perfecting event logistics, enhancing attendee
+                  At Maxpo, we don&apos;t settle for average. Whether it&apos;s perfecting event logistics, enhancing attendee
                   experiences, or supporting our clients beyond the event itself, we believe in going the extra mile.
                 </p>
               </div>
@@ -254,12 +254,12 @@ export default function Home() {
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Careers at Maxpo</h2>
             <p className="mb-8 text-lg text-gray-600">Your Future Starts Here!</p>
             <p className="mb-12 text-gray-600">
-              At Maxpo, we believe in talent, ambition, and fresh perspectives. Whether you're a young mind eager to
+              At Maxpo, we believe in talent, ambition, and fresh perspectives. Whether you&apos;re a young mind eager to
               innovate, a seasoned expert ready to make an impact, or an intern looking to gain hands-on experience,
-              there's a place for you here.
+              there&apos;s a place for you here.
             </p>
             <p className="mb-8 text-gray-600">
-              We thrive on creativity, collaboration, and continuous growth. If you're someone who loves challenges,
+              We thrive on creativity, collaboration, and continuous growth. If you&apos;re someone who loves challenges,
               enjoys thinking outside the box, and wants to be part of a dynamic team shaping the future of global trade
               shows, we want to hear from you!
             </p>
@@ -276,7 +276,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 text-3xl font-bold tracking-tight md:text-4xl">Get in Touch</h2>
             <p className="mb-12 text-lg text-gray-300">
-              Ready to create exceptional business experiences? Let's connect.
+              Ready to create exceptional business experiences? Let&apos;s connect.
             </p>
             <div className="grid gap-6 md:grid-cols-2">
               <Link
@@ -297,8 +297,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

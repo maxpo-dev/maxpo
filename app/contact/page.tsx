@@ -14,8 +14,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+
 
 export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false)
@@ -28,7 +27,7 @@ export default function Contact() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
+
 
       {/* Hero Section */}
       <section className="relative pt-20">
@@ -39,7 +38,7 @@ export default function Contact() {
         <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">Get in Touch</h1>
           <p className="max-w-2xl text-lg text-gray-300 md:text-xl">
-            Have a question or ready to create an exceptional exhibition experience? We're here to help.
+            Have a question or ready to create an exceptional exhibition experience? We&apos;re here to help.
           </p>
         </div>
       </section>
@@ -221,7 +220,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label>I'm interested in</Label>
+                    <Label>I&apos;m interested in</Label>
                     <RadioGroup defaultValue="trade-show">
                       <div className="flex flex-wrap gap-6">
                         <div className="flex items-center space-x-2">
@@ -300,8 +299,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

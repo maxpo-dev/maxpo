@@ -3,13 +3,11 @@ import Link from "next/link"
 import { ArrowRight, Linkedin, Twitter } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+
 
 export default function Leadership() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-20">
@@ -46,7 +44,7 @@ export default function Leadership() {
                   exhibition formats, and built a reputation for excellence and innovation.
                 </p>
                 <p>
-                  Inayat's vision continues to drive the company forward, as he leads Maxpo's strategic initiatives and
+                  Inayat&apos;s vision continues to drive the company forward, as he leads Maxpo&apos;s strategic initiatives and
                   global expansion efforts.
                 </p>
               </div>
@@ -91,8 +89,8 @@ export default function Leadership() {
                 <h3 className="mb-1 text-xl font-semibold">Aisha Rahman</h3>
                 <p className="mb-4 text-gray-500">Chief Executive Officer</p>
                 <p className="mb-6 text-gray-600">
-                  Aisha leads Maxpo's global operations with a focus on strategic growth, innovation, and operational
-                  excellence. Her leadership has been instrumental in the company's expansion into new markets.
+                  Aisha leads Maxpo&apos;s global operations with a focus on strategic growth, innovation, and operational
+                  excellence. Her leadership has been instrumental in the company&apos;s expansion into new markets.
                 </p>
                 <div className="flex gap-4">
                   <Link href="#" className="rounded-full bg-gray-100 p-2 transition-colors hover:bg-gray-200">
@@ -121,7 +119,7 @@ export default function Leadership() {
                 <h3 className="mb-1 text-xl font-semibold">Robert Kim</h3>
                 <p className="mb-4 text-gray-500">Chief Financial Officer</p>
                 <p className="mb-6 text-gray-600">
-                  Robert oversees Maxpo's financial strategy and operations, ensuring the company's continued growth and
+                  Robert oversees Maxpo&apos;s financial strategy and operations, ensuring the company&apos;s continued growth and
                   financial health. His expertise in financial management has been key to our success.
                 </p>
                 <div className="flex gap-4">
@@ -341,7 +339,7 @@ export default function Leadership() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Connect with Our Leadership</h2>
             <p className="mb-8 text-lg text-gray-300">
-              Interested in learning more about Maxpo's leadership or exploring partnership opportunities? Get in touch
+              Interested in learning more about Maxpo&apos;s leadership or exploring partnership opportunities? Get in touch
               with our team.
             </p>
             <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">
@@ -351,7 +349,6 @@ export default function Leadership() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }
