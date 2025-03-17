@@ -85,7 +85,7 @@ export default function Navbar() {
         {/* Desktop Get in Touch Button */}
         <div className="hidden md:block">
           <Button
-            className={`rounded-full border-2 px-6 py-2 transition-all duration-300 ${
+            className={`rounded-full  px-6 py-2 transition-all duration-300 ${
               isScrolled 
                 ? "bg-black text-white border-black hover:bg-gray-800"
                 : "bg-white text-black border-black hover:bg-gray-200"
