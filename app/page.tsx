@@ -30,9 +30,12 @@ export default function Home() {
             Seamlessly Designed, Perfectly Delivered. Redefining the business event landscape through innovation and
             collaboration.
           </p>
+          <Link href="/past-events">
           <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">
             Discover Our Events <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
+          </Link>
+
         </div>
         <div className="absolute bottom-8 left-0 right-0 flex justify-center">
           <ChevronDown className="h-8 w-8 animate-bounce text-white opacity-70" />
@@ -287,7 +290,7 @@ export default function Home() {
                 <p className="text-gray-600">Reach out to our team</p>
               </Link>
               <Link
-                href="/events"
+                href="/upcoming-events"
                 className="flex flex-col items-center justify-center rounded-2xl bg-white p-8 text-black transition-transform duration-300 hover:-translate-y-2"
               >
                 <h3 className="mb-2 text-xl font-semibold">Upcoming Events</h3>

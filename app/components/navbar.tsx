@@ -84,6 +84,7 @@ export default function Navbar() {
 
         {/* Desktop Get in Touch Button */}
         <div className="hidden md:block">
+          <Link href="/contact">
           <Button
             className={`rounded-full  px-6 py-2 transition-all duration-300 ${
               isScrolled 
@@ -93,6 +94,7 @@ export default function Navbar() {
           >
             Get in Touch
           </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -135,6 +137,7 @@ export default function Navbar() {
             <Link href="/blog" className="border-b pb-2 text-sm font-medium">Blog</Link>
 
             {/* Mobile Get in Touch Button */}
+            <Link href="/contact">
             <Button
               className={`mt-4 w-full rounded-full border-2 transition-all duration-300 ${
                 isScrolled 
@@ -144,6 +147,8 @@ export default function Navbar() {
             >
               Get in Touch
             </Button>
+            </Link>
+           
           </nav>
         </div>
       )}
