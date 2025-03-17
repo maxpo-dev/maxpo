@@ -83,10 +83,10 @@ export default function Contact() {
                     <MapPin className="mt-1 h-5 w-5 text-gray-500" />
                     <span className="text-gray-600">Bandra Kurla Complex, Mumbai, India</span>
                   </li>
-                  <li className="flex items-center gap-3">
+                  {/* <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-gray-500" />
                     <span className="text-gray-600">+91 22 987 6543</span>
-                  </li>
+                  </li> */}
                   <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-gray-500" />
                     <span className="text-gray-600">india@maxpo.com</span>

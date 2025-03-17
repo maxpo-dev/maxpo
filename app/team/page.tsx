@@ -19,7 +19,7 @@ export default function OurTeam() {
         <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">Our Team</h1>
           <p className="max-w-2xl text-lg text-gray-300 md:text-xl">
-            Passionate, proactive, and always innovating. Meet the people behind Maxpo's success.
+            Passionate, proactive, and always innovating. Meet the people behind Maxpo&apos;s success.
           </p>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function OurTeam() {
               <div>
                 <h3 className="mb-3 text-2xl font-semibold">Staying Ahead, Always</h3>
                 <p className="text-gray-600">
-                  We operate in a world that's constantly evolving, and we embrace that change. Our team stays ahead of
+                  We operate in a world that&apos;s constantly evolving, and we embrace that change. Our team stays ahead of
                   industry trends, new technologies, and market shifts to ensure our events remain relevant, impactful,
                   and future-focused. From digital innovations to emerging business strategies, we are always learning,
                   adapting, and improving.
@@ -73,7 +73,7 @@ export default function OurTeam() {
               <div>
                 <h3 className="mb-3 text-2xl font-semibold">Exceeding Expectations, Every Time</h3>
                 <p className="text-gray-600">
-                  At Maxpo, we don't settle for average. Whether it's perfecting event logistics, enhancing attendee
+                  At Maxpo, we don&apos;t settle for average. Whether it&apos;s perfecting event logistics, enhancing attendee
                   experiences, or supporting our clients beyond the event itself, we believe in going the extra mile. We
                   anticipate needs before they arise, solve challenges before they become problems, and deliver results
                   that speak for themselves.
@@ -152,7 +152,7 @@ export default function OurTeam() {
                 <h3 className="mb-1 text-xl font-semibold">David Chen</h3>
                 <p className="mb-4 text-gray-500">Creative Director</p>
                 <p className="mb-6 text-gray-600">
-                  David's creative vision has transformed our exhibitions into immersive experiences that captivate and
+                  David&apos;s creative vision has transformed our exhibitions into immersive experiences that captivate and
                   inspire.
                 </p>
                 <div className="flex gap-4">
@@ -296,7 +296,7 @@ export default function OurTeam() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Join Our Team</h2>
             <p className="mb-8 text-lg text-gray-300">
-              We're always looking for talented individuals who are passionate about creating exceptional exhibition
+              We&apos;re always looking for talented individuals who are passionate about creating exceptional exhibition
               experiences. Explore our current opportunities and become part of our dynamic team.
             </p>
             <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default function BlogPost({  }: { params: { slug: string } }) {
   // In a real application, you would fetch the blog post data based on the slug
   // For this example, we'll use placeholder content
 
@@ -136,9 +136,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 </p>
 
                 <blockquote>
-                  "The future of trade shows isn't about choosing between physical or digital—it's about creating
+                  &quot;The future of trade shows isn&apos;t about choosing between physical or digital—it&apos;s about creating
                   seamless experiences that leverage the strengths of both formats to deliver maximum value to
-                  exhibitors and attendees alike."
+                  exhibitors and attendees alike.&quot;
                 </blockquote>
 
                 <h2>Challenges and Considerations</h2>
@@ -222,7 +222,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     <h3 className="text-lg font-semibold">About the Author</h3>
                     <p className="mb-2 text-gray-500">Sarah Johnson, Chief Operations Officer</p>
                     <p className="text-gray-600">
-                      Sarah has over 15 years of experience in the exhibition industry and leads Maxpo's operations with
+                      Sarah has over 15 years of experience in the exhibition industry and leads Maxpo&apos;s operations with
                       precision and innovation. She regularly shares insights on industry trends and best practices.
                     </p>
                   </div>
