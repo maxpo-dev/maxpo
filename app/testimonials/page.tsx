@@ -37,7 +37,7 @@ export default function Testimonials() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Success Stories</h2>
             <p className="mb-16 text-lg text-gray-600">
-              Our clients' success is our success. Here's what they have to say about their experience with Maxpo.
+              Our clients&apos; success is our success. Here&apos;s what they have to say about their experience with Maxpo.
             </p>
           </div>
 
@@ -67,10 +67,10 @@ export default function Testimonials() {
               <div className="relative">
                 <Quote className="absolute -left-2 -top-2 h-8 w-8 text-gray-200" />
                 <p className="mb-6 text-gray-600">
-                  "Working with Maxpo for our annual tech conference was a game-changer. Their attention to detail,
+                  &quot;Working with Maxpo for our annual tech conference was a game-changer. Their attention to detail,
                   innovative approach, and seamless execution exceeded our expectations. The event attracted more
-                  attendees than ever before, and the feedback was overwhelmingly positive. We've already booked them
-                  for next year's event!"
+                  attendees than ever before, and the feedback was overwhelmingly positive. We&apos;ve already booked them
+                  for next year&apos;s event!&quot;
                 </p>
               </div>
               <div className="flex items-center justify-between">
@@ -104,10 +104,10 @@ export default function Testimonials() {
               <div className="relative">
                 <Quote className="absolute -left-2 -top-2 h-8 w-8 text-gray-200" />
                 <p className="mb-6 text-gray-600">
-                  "Maxpo's expertise in organizing food and beverage exhibitions is unmatched. They understood our
+                  &quot;Maxpo&apos;s expertise in organizing food and beverage exhibitions is unmatched. They understood our
                   vision and brought it to life with creativity and precision. The exhibition attracted high-quality
                   visitors, resulting in numerous business opportunities for our company. Their team was professional,
-                  responsive, and a pleasure to work with."
+                  responsive, and a pleasure to work with.&quot;
                 </p>
               </div>
               <div className="flex items-center justify-between">
@@ -172,8 +172,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "Maxpo's team went above and beyond to ensure our exhibition was a success. Their attention to detail
-                and proactive approach made the entire process smooth and stress-free."
+                &quot;Maxpo&apos;s team went above and beyond to ensure our exhibition was a success. Their attention to detail
+                and proactive approach made the entire process smooth and stress-free.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -200,8 +200,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "The level of professionalism and expertise demonstrated by Maxpo was exceptional. They understood our
-                industry and created an event that perfectly aligned with our objectives."
+                &quot;The level of professionalism and expertise demonstrated by Maxpo was exceptional. They understood our
+                industry and created an event that perfectly aligned with our objectives.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -228,8 +228,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "Working with Maxpo was a pleasure from start to finish. Their creative ideas and flawless execution
-                resulted in an event that exceeded our expectations and delivered real business value."
+                &quot;Working with Maxpo was a pleasure from start to finish. Their creative ideas and flawless execution
+                resulted in an event that exceeded our expectations and delivered real business value.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -256,8 +256,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "Maxpo's digital integration for our hybrid event was impressive. They seamlessly combined physical and
-                virtual elements, creating an engaging experience for all participants."
+                &quot;Maxpo&apos;s digital integration for our hybrid event was impressive. They seamlessly combined physical and
+                virtual elements, creating an engaging experience for all participants.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -284,8 +284,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "The ROI from our exhibition with Maxpo was outstanding. The quality of attendees and the business
-                opportunities generated far exceeded our previous events with other organizers."
+                &quot;The ROI from our exhibition with Maxpo was outstanding. The quality of attendees and the business
+                opportunities generated far exceeded our previous events with other organizers.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -312,8 +312,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "Maxpo's understanding of our industry and target audience was impressive. They created an event that
-                attracted exactly the right people, resulting in valuable connections and partnerships."
+                &quot;Maxpo&apos;s understanding of our industry and target audience was impressive. They created an event that
+                attracted exactly the right people, resulting in valuable connections and partnerships.&quot;
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full">
@@ -347,7 +347,7 @@ export default function Testimonials() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Client Success Stories</h2>
             <p className="mb-16 text-lg text-gray-600">
-              Explore detailed case studies of how we've helped our clients achieve their exhibition goals.
+              Explore detailed case studies of how we&apos;ve helped our clients achieve their exhibition goals.
             </p>
           </div>
 
@@ -436,7 +436,7 @@ export default function Testimonials() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Ready to Create Your Success Story?</h2>
             <p className="mb-8 text-lg text-gray-300">
-              Let's work together to create an exceptional exhibition experience that drives business growth and fosters
+              Let&apos;s work together to create an exceptional exhibition experience that drives business growth and fosters
               meaningful connections.
             </p>
             <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">

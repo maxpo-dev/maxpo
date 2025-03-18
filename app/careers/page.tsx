@@ -4,14 +4,10 @@ import { ArrowRight, CheckCircle, Briefcase, MapPin, Clock, DollarSign } from "l
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
 
 export default function Careers() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
-
       {/* Hero Section */}
       <section className="relative pt-20">
         <div className="absolute inset-0 z-0">
@@ -81,7 +77,7 @@ export default function Careers() {
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Professional Growth</h3>
                 <p className="text-gray-600">
-                  We invest in our team's development through training programs, mentorship opportunities, and
+                  We invest in our team&apos;s development through training programs, mentorship opportunities, and
                   challenging projects that push boundaries and develop new skills.
                 </p>
               </CardContent>
@@ -158,12 +154,12 @@ export default function Careers() {
                   turn ambitious ideas into reality.
                 </p>
                 <p>
-                  We operate in a world that's constantly evolving, and we embrace that change. Our team stays ahead of
+                  We operate in a world that&apos;s constantly evolving, and we embrace that change. Our team stays ahead of
                   industry trends, new technologies, and market shifts to ensure our events remain relevant, impactful,
                   and future-focused.
                 </p>
                 <p>
-                  At the core of it all, Maxpo is more than a team—we're a force for change in the industry, shaping the
+                  At the core of it all, Maxpo is more than a team—we&apos;re a force for change in the industry, shaping the
                   future of global trade shows and business connections.
                 </p>
               </div>
@@ -206,7 +202,7 @@ export default function Careers() {
                       </span>
                     </div>
                     <p className="mb-4 text-gray-600">
-                      We're looking for an experienced Event Manager to plan and execute trade shows and exhibitions,
+                      We&apos;re looking for an experienced Event Manager to plan and execute trade shows and exhibitions,
                       managing all aspects from concept to completion.
                     </p>
                     <div className="mb-4">
@@ -250,7 +246,7 @@ export default function Careers() {
                       </span>
                     </div>
                     <p className="mb-4 text-gray-600">
-                      We're seeking a creative and data-driven Marketing Specialist to develop and implement marketing
+                      We&apos;re seeking a creative and data-driven Marketing Specialist to develop and implement marketing
                       strategies for our exhibitions and events.
                     </p>
                     <div className="mb-4">
@@ -296,7 +292,7 @@ export default function Careers() {
                       </span>
                     </div>
                     <p className="mb-4 text-gray-600">
-                      We're looking for a talented Exhibition Designer to create innovative and impactful exhibition
+                      We&apos;re looking for a talented Exhibition Designer to create innovative and impactful exhibition
                       stands and spaces for our clients.
                     </p>
                     <div className="mb-4">
@@ -342,7 +338,7 @@ export default function Careers() {
                       </span>
                     </div>
                     <p className="mb-4 text-gray-600">
-                      We're seeking an experienced Business Development Manager to drive growth in the Indian market and
+                      We&apos;re seeking an experienced Business Development Manager to drive growth in the Indian market and
                       expand our client base.
                     </p>
                     <div className="mb-4">
@@ -375,7 +371,7 @@ export default function Careers() {
 
           <div className="mt-12 text-center">
             <p className="mb-6 text-gray-600">
-              Don't see a position that matches your skills? We're always looking for talented individuals to join our
+              Don&apos;t see a position that matches your skills? We&apos;re always looking for talented individuals to join our
               team.
             </p>
             <Button size="lg" className="rounded-full bg-black px-8 text-white hover:bg-gray-800">
@@ -404,7 +400,7 @@ export default function Careers() {
                 <h3 className="mb-3 text-2xl font-semibold">Learn from Industry Experts</h3>
                 <p className="text-gray-600">
                   Our internship program offers a unique opportunity to work alongside experienced professionals and
-                  gain valuable insights into the exhibition industry. You'll be involved in real projects and
+                  gain valuable insights into the exhibition industry. You&apos;ll be involved in real projects and
                   contribute to the success of our events.
                 </p>
               </div>
@@ -421,7 +417,7 @@ export default function Careers() {
               <div>
                 <h3 className="mb-3 text-2xl font-semibold">Potential for Full-Time Roles</h3>
                 <p className="text-gray-600">
-                  Many of our full-time team members started as interns. We're committed to identifying and nurturing
+                  Many of our full-time team members started as interns. We&apos;re committed to identifying and nurturing
                   talent, with opportunities for exceptional interns to join our team permanently.
                 </p>
               </div>
@@ -461,9 +457,9 @@ export default function Careers() {
                 </div>
               </div>
               <p className="italic text-gray-600">
-                "Working at Maxpo has been an incredible journey. The collaborative environment, opportunities for
-                growth, and the chance to work on exciting global projects have made it a rewarding experience. I've
-                developed both professionally and personally during my time here."
+                &quot;Working at Maxpo has been an incredible journey. The collaborative environment, opportunities for
+                growth, and the chance to work on exciting global projects have made it a rewarding experience. I&apos;ve
+                developed both professionally and personally during my time here.&quot;
               </p>
             </div>
 
@@ -485,9 +481,9 @@ export default function Careers() {
                 </div>
               </div>
               <p className="italic text-gray-600">
-                "The culture at Maxpo is what sets it apart. There's a perfect balance of autonomy and support, allowing
+                &quot;The culture at Maxpo is what sets it apart. There&apos;s a perfect balance of autonomy and support, allowing
                 you to take ownership of your work while having the resources you need to succeed. The team is
-                passionate, innovative, and always pushing boundaries."
+                passionate, innovative, and always pushing boundaries.&quot;
               </p>
             </div>
 
@@ -509,9 +505,9 @@ export default function Careers() {
                 </div>
               </div>
               <p className="italic text-gray-600">
-                "Starting as an intern and growing into a full-time role has been an amazing experience. Maxpo truly
+                &quot;Starting as an intern and growing into a full-time role has been an amazing experience. Maxpo truly
                 invests in its people, providing mentorship, training, and opportunities to work on challenging projects
-                that push your creative boundaries."
+                that push your creative boundaries.&quot;
               </p>
             </div>
           </div>
@@ -541,8 +537,6 @@ export default function Careers() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }
