@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  // Use the slug parameter to show which post we're viewing
+  const { slug } = await params
 
-export default function BlogPost({  }: { params: { slug: string } }) {
   // In a real application, you would fetch the blog post data based on the slug
   // For this example, we'll use placeholder content
 
   return (
     <div className="flex min-h-screen flex-col">
-      
-
       <main className="flex-1 pt-20">
         {/* Article Header */}
         <div className="relative">
@@ -33,6 +33,8 @@ export default function BlogPost({  }: { params: { slug: string } }) {
             <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               The Future of Trade Shows in a Digital World
             </h1>
+            {/* Display the slug to show we're using it */}
+            <p className="mb-4 text-sm text-gray-300">Post ID: {slug}</p>
             <div className="mb-6 flex flex-wrap gap-6 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
@@ -136,8 +138,8 @@ export default function BlogPost({  }: { params: { slug: string } }) {
                 </p>
 
                 <blockquote>
-                  &quot;The future of trade shows isn&apos;t about choosing between physical or digital—it&apos;s about creating
-                  seamless experiences that leverage the strengths of both formats to deliver maximum value to
+                  &quot;The future of trade shows isn&apos;t about choosing between physical or digital—it&apos;s about
+                  creating seamless experiences that leverage the strengths of both formats to deliver maximum value to
                   exhibitors and attendees alike.&quot;
                 </blockquote>
 
@@ -222,8 +224,9 @@ export default function BlogPost({  }: { params: { slug: string } }) {
                     <h3 className="text-lg font-semibold">About the Author</h3>
                     <p className="mb-2 text-gray-500">Sarah Johnson, Chief Operations Officer</p>
                     <p className="text-gray-600">
-                      Sarah has over 15 years of experience in the exhibition industry and leads Maxpo&apos;s operations with
-                      precision and innovation. She regularly shares insights on industry trends and best practices.
+                      Sarah has over 15 years of experience in the exhibition industry and leads Maxpo&apos;s operations
+                      with precision and innovation. She regularly shares insights on industry trends and best
+                      practices.
                     </p>
                   </div>
                 </div>
@@ -312,8 +315,6 @@ export default function BlogPost({  }: { params: { slug: string } }) {
           </div>
         </div>
       </main>
-
-      
     </div>
   )
 }
