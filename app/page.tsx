@@ -20,7 +20,7 @@ export default function Home() {
       title: "Global Business Summit 2025",
       date: "April 15-17, 2025",
       location: "Dubai World Trade Centre",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/events/WhatsApp Image 2025-03-20 at 6.01.11 PM.jpeg",
       description: "Join industry leaders and innovators at our flagship business summit.",
       category: "Conference",
     },
@@ -136,93 +136,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-100 to-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16">
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl mb-4">
-                Upcoming <span className="text-blue-600">Events</span>
-              </h2>
-              <p className="text-lg text-gray-600 md:text-xl">
-                Join us at our next world-class exhibitions and conferences
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {upcomingEvents.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={event.image || "/placeholder.svg"}
-                    alt={event.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-medium py-1 px-3 rounded-full">
-                    {event.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                    {event.title}
-                  </h3>
-                  <p className="mb-4 text-gray-600">{event.description}</p>
-                  <div className="space-y-2 text-sm text-gray-500">
-                    <div className="flex items-center">
-                      <Calendar className="mr-2 h-4 w-4 text-blue-600" />
-                      <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="mr-2 h-4 w-4 text-blue-600" />
-                      <span>{event.location}</span>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-between items-center">
-                    <Link href={`/events/${event.id}`}>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                    <Link href={`/register/${event.id}`}>
-                      <Button size="sm" className="rounded-full bg-blue-600 text-white hover:bg-blue-700">
-                        Register Now
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Link href="/all-events">
-              <Button className="rounded-full bg-blue-950 px-8 py-6 text-white hover:bg-blue-900">
-                View All Events <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+      <section className="relative bg-gradient-to-b from-gray-100 to-white py-24">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
+        {/* Section Title */}
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl mb-4">
+              Upcoming <span className="text-blue-600">Events</span>
+            </h2>
+            <p className="text-lg text-gray-600 md:text-xl">
+              Join us at our next world-class exhibitions and conferences
+            </p>
+          </motion.div>
         </div>
-      </section>
 
-      
+        {/* Event Cards Grid */}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {upcomingEvents.map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+              {/* Image */}
+              <div className="relative h-65  overflow-hidden rounded-t-3xl">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  // className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
+                  {event.category}
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 bg-white backdrop-blur-lg rounded-b-3xl">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                  {event.title}
+                </h3>
+                <p className="mb-4 text-gray-600">{event.description}</p>
+
+                {/* Event Details */}
+                <div className="space-y-2 text-sm text-gray-500">
+                  <div className="flex items-center">
+                    <Calendar className="mr-2 h-4 w-4 text-blue-600" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="mr-2 h-4 w-4 text-blue-600" />
+                    <span>{event.location}</span>
+                  </div>
+                </div>
+
+                {/* Buttons */}
+                <div className="mt-6 flex justify-between items-center">
+                  <Link href={`/events/${event.id}`}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                  <Link href={`/register/${event.id}`}>
+                    <Button size="sm" className="rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300">
+                      Register Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View All Events Button */}
+        <div className="mt-16 text-center">
+          <Link href="/all-events">
+            <Button className="rounded-full bg-blue-950 px-8 py-6 text-white hover:bg-blue-900 transition-all duration-300 shadow-lg">
+              View All Events <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
 
       {/* Our Essence */}
       <section className="bg-blue-950 py-24 text-white">

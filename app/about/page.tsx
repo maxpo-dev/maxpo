@@ -3,12 +3,9 @@ import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
-
 export default function OurStory() {
   return (
     <div className="flex min-h-screen flex-col">
-      
-
       {/* Hero Section */}
       <section className="relative pt-20">
         <div className="absolute inset-0 z-0">
@@ -24,7 +21,8 @@ export default function OurStory() {
         <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">Our Story</h1>
           <p className="max-w-2xl text-lg text-gray-300 md:text-xl">
-            Two decades of innovation, excellence, and transforming the exhibition industry.
+            Our headquarters are based in Dubai, serving as the central hub for our global operations. At the same time,
+            our office in India plays a vital role in supporting our regional and international initiatives.
           </p>
         </div>
       </section>
@@ -35,8 +33,10 @@ export default function OurStory() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Our Journey</h2>
             <p className="mb-16 text-lg text-gray-600">
-              From our humble beginnings to becoming a global leader in the exhibition industry, our journey has been
-              defined by innovation, perseverance, and a commitment to excellence.
+              Maxpo: 20 Years of Excellence, 15 Years of Global Impact. For two decades, Maxpo has been at the forefront
+              of the trade exhibition industry, creating transformative business experiences. Over the past 15 years,
+              we've expanded our expertise to international markets, delivering world-class exhibitions that drive
+              growth, innovation, and lasting industry impact.
             </p>
           </div>
 
@@ -127,8 +127,9 @@ export default function OurStory() {
             <div className="rounded-2xl bg-blue-900 p-8 md:p-12">
               <h3 className="mb-6 text-2xl font-bold">Our Mission</h3>
               <p className="mb-6 text-gray-300">
-                To spark innovation, cultivate meaningful connections, and open new doors for businesses worldwide
-                through exceptional exhibition experiences.
+                Our mission is to spark innovation, cultivate meaningful connections, and open new doors for businesses
+                worldwide. Every event we create is designed to empower industries, drive collaboration, and shape the
+                future of global commerce.
               </p>
               <p className="text-gray-300">
                 Every event we create is designed to empower industries, drive collaboration, and shape the future of
@@ -139,8 +140,8 @@ export default function OurStory() {
             <div className="rounded-2xl bg-blue-900 p-8 md:p-12">
               <h3 className="mb-6 text-2xl font-bold">Our Vision</h3>
               <p className="mb-6 text-gray-300">
-                To transform trade shows into catalysts for industry evolution, making them more than just networking
-                spaces but powerful engines for innovation and global impact.
+                Our vision is to transform trade shows into catalysts for industry evolution, making them more than just
+                networking spaces but powerful engines for innovation and global impact.
               </p>
               <p className="text-gray-300">
                 We see a world where exhibitions inspire breakthroughs, foster industry transformation, and generate
@@ -166,9 +167,11 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Innovation</h3>
+              <h3 className="mb-4 text-xl font-semibold">Excellence in Execution</h3>
               <p className="text-gray-600">
-                We constantly push boundaries and embrace new ideas to create exceptional exhibition experiences.
+                We aim for perfection in each project, carefully planning and conducting events that beat expectations.
+                Our commitment to quality guarantees that each conference and exhibition is a reflection of our pursuit
+                of excellence.
               </p>
             </div>
 
@@ -176,10 +179,11 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Excellence</h3>
+              <h3 className="mb-4 text-xl font-semibold">Innovation and Adaptability</h3>
               <p className="text-gray-600">
-                We are committed to delivering the highest quality in everything we do, from event planning to
-                execution.
+                With a changing industry, we are innovative and responsive to new trends. Our strategy guarantees that
+                we provide innovative experiences, placing our clients at the forefront of the ever-changing global
+                marketplace.
               </p>
             </div>
 
@@ -187,9 +191,10 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Collaboration</h3>
+              <h3 className="mb-4 text-xl font-semibold">Integrity and Transparency</h3>
               <p className="text-gray-600">
-                We believe in the power of working together, both within our team and with our clients and partners.
+                We maintain the highest levels of integrity, building trust through honest communication and ethical
+                conduct. Our partners and clients can trust us with honesty and responsibility in all matters.
               </p>
             </div>
 
@@ -197,9 +202,10 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">4</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Integrity</h3>
+              <h3 className="mb-4 text-xl font-semibold">Client-Centric Approach</h3>
               <p className="text-gray-600">
-                We operate with honesty, transparency, and ethical standards in all our business dealings.
+                Understanding and prioritizing our client's individual needs is at the center of our business. We adapt
+                our services to fit their objectives, ensuring unique experiences that yield success.
               </p>
             </div>
 
@@ -207,9 +213,11 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">5</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Global Perspective</h3>
+              <h3 className="mb-4 text-xl font-semibold">Collaboration and Teamwork</h3>
               <p className="text-gray-600">
-                We embrace diversity and think globally, creating exhibitions that connect businesses across borders.
+                We are a firm believer in the strength of teamwork, working together with clients, partners, and our
+                team. This collaboration creates a partnership, which gives rise to innovative ideas and the achievement
+                of common goals.
               </p>
             </div>
 
@@ -217,9 +225,11 @@ export default function OurStory() {
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <span className="text-2xl font-bold">6</span>
               </div>
-              <h3 className="mb-4 text-xl font-semibold">Customer Focus</h3>
+              <h3 className="mb-4 text-xl font-semibold">A Culture of Energy, Growth & Fun</h3>
               <p className="text-gray-600">
-                We put our clients at the center of everything we do, ensuring their success is our success.
+                We work hard, but we also know how to keep the energy high. The Maxpo culture is a mix of collaboration,
+                ambition, and celebration. We support each other, push each other to do better, and celebrate our
+                successes together.
               </p>
             </div>
           </div>
@@ -245,8 +255,6 @@ export default function OurStory() {
           </div>
         </div>
       </section>
-
-      
     </div>
   )
 }

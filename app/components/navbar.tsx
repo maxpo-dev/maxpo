@@ -42,7 +42,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium">
               About <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
@@ -57,7 +57,7 @@ export default function Navbar() {
                 <Link href="/leadership" className="w-full">Leadership</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
 
           {/* <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium">
@@ -75,6 +75,7 @@ export default function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu> */}
+          <Link href="/events" className="text-sm font-medium">About</Link>
           <Link href="/events" className="text-sm font-medium">Events</Link>
           <Link href="/services" className="text-sm font-medium">Services</Link>
           

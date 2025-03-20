@@ -1,3 +1,8 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Calendar, MapPin, Users } from "lucide-react"
@@ -5,12 +10,116 @@ import { ArrowRight, Calendar, MapPin, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
+// Define event types
+type EventType = "All Events" | "Trade Shows" | "Conferences" | "Corporate Events"
+
+// Define event interface
+interface Event {
+  id: number
+  title: string
+  date: string
+  location: string
+  description: string
+  category: string
+  image: string
+}
 
 export default function UpcomingEvents() {
+  // Events data
+  const eventsData: Event[] = [
+    {
+      id: 1,
+      title: "Healthcare Innovation Expo",
+      date: "November 5-7, 2023",
+      location: "Mumbai Exhibition Centre, India",
+      description:
+        "Showcasing the latest advancements in healthcare technology, medical devices, and digital health solutions.",
+      category: "Trade Shows",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+    {
+      id: 2,
+      title: "Sustainable Construction Forum",
+      date: "December 10-12, 2023",
+      location: "Abu Dhabi National Exhibition Centre, UAE",
+      description:
+        "Bringing together architects, engineers, and construction professionals to explore sustainable building practices.",
+      category: "Conferences",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+    {
+      id: 3,
+      title: "Global Food & Beverage Expo",
+      date: "January 20-23, 2024",
+      location: "Dubai Exhibition Centre, UAE",
+      description:
+        "The largest food and beverage exhibition in the region, featuring products from over 100 countries.",
+      category: "Trade Shows",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+    {
+      id: 4,
+      title: "Digital Marketing Summit",
+      date: "February 15-16, 2024",
+      location: "Hyderabad International Convention Centre, India",
+      description:
+        "A conference for marketing professionals featuring workshops on SEO, social media, content marketing, and more.",
+      category: "Conferences",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+    {
+      id: 5,
+      title: "Renewable Energy Conference",
+      date: "March 8-10, 2024",
+      location: "Riyadh International Convention Center, Saudi Arabia",
+      description: "Exploring the latest innovations in renewable energy technologies and sustainable power solutions.",
+      category: "Conferences",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+    {
+      id: 6,
+      title: "Fintech Innovation Forum",
+      date: "April 5-7, 2024",
+      location: "Dubai International Financial Centre, UAE",
+      description:
+        "A gathering of financial technology leaders, innovators, and investors exploring the future of finance.",
+      category: "Corporate Events",
+      image: "/placeholder.svg?height=400&width=600",
+    },
+  ]
+
+  // State for active filter and sorted events
+  const [activeFilter, setActiveFilter] = useState<EventType>("All Events")
+  const [sortOption, setSortOption] = useState<string>("Date: Nearest first")
+
+  // Filter events based on active filter
+  const filteredEvents = eventsData.filter((event) => activeFilter === "All Events" || event.category === activeFilter)
+
+  // Sort events based on selected sort option
+  const sortedEvents = [...filteredEvents].sort((a, b) => {
+    if (sortOption === "Date: Nearest first") {
+      return a.date.localeCompare(b.date)
+    } else if (sortOption === "Date: Furthest first") {
+      return b.date.localeCompare(a.date)
+    } else if (sortOption === "Location: A-Z") {
+      return a.location.localeCompare(b.location)
+    } else {
+      return a.category.localeCompare(b.category)
+    }
+  })
+
+  // Handle filter change
+  const handleFilterChange = (filter: EventType) => {
+    setActiveFilter(filter)
+  }
+
+  // Handle sort change
+  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSortOption(e.target.value)
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
-      
-
       {/* Hero Section */}
       <section className="relative pt-20">
         <div className="absolute inset-0 z-0">
@@ -36,28 +145,48 @@ export default function UpcomingEvents() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="rounded-full px-4 py-2">
+              <Badge
+                variant={activeFilter === "All Events" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "All Events" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("All Events")}
+              >
                 All Events
               </Badge>
-              <Badge variant="outline" className="rounded-full bg-gray-100 px-4 py-2">
+              <Badge
+                variant={activeFilter === "Trade Shows" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Trade Shows" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("Trade Shows")}
+              >
                 Trade Shows
               </Badge>
-              <Badge variant="outline" className="rounded-full bg-gray-100 px-4 py-2">
+              <Badge
+                variant={activeFilter === "Conferences" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Conferences" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("Conferences")}
+              >
                 Conferences
               </Badge>
-              <Badge variant="outline" className="rounded-full bg-gray-100 px-4 py-2">
+              <Badge
+                variant={activeFilter === "Corporate Events" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Corporate Events" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("Corporate Events")}
+              >
                 Corporate Events
               </Badge>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500">Sort by:</span>
-              <select className="rounded-md border border-gray-200 bg-white px-3 py-1 text-sm">
+              <select
+                className="rounded-md border border-gray-200 bg-white px-3 py-1 text-sm"
+                value={sortOption}
+                onChange={handleSortChange}
+              >
                 <option>Date: Nearest first</option>
                 <option>Date: Furthest first</option>
                 <option>Location: A-Z</option>
                 <option>Industry: A-Z</option>
               </select>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -65,7 +194,7 @@ export default function UpcomingEvents() {
       {/* Featured Event */}
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <div className="overflow-hidden rounded-2xl bg-black">
+          <div className="overflow-hidden rounded-2xl bg-blue-950">
             <div className="grid md:grid-cols-2">
               <div className="relative h-[300px] md:h-auto">
                 <Image
@@ -114,221 +243,61 @@ export default function UpcomingEvents() {
       {/* Upcoming Events List */}
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Event 1 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Healthcare Innovation Expo"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Healthcare</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Healthcare Innovation Expo</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">November 5-7, 2023</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Mumbai Exhibition Centre, India</span>
-                  </div>
-                </div>
-                <p className="mb-6 text-gray-600">
-                  Showcasing the latest advancements in healthcare technology, medical devices, and digital health
-                  solutions.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
+          {sortedEvents.length === 0 ? (
+            <div className="py-16 text-center">
+              <h3 className="text-xl font-semibold">No events found matching your filter</h3>
+              <p className="mt-2 text-gray-600">Try selecting a different category or clear your filters</p>
+              <Button variant="outline" className="mt-4 rounded-full" onClick={() => setActiveFilter("All Events")}>
+                Show All Events
+              </Button>
             </div>
-
-            {/* Event 2 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Sustainable Construction Forum"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Construction</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Sustainable Construction Forum</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">December 10-12, 2023</span>
+          ) : (
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {sortedEvents.map((event) => (
+                <div
+                  key={event.id}
+                  className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={event.image || "/placeholder.svg"}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                      <Badge className="bg-white/20 text-white hover:bg-white/30">{event.category}</Badge>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Abu Dhabi National Exhibition Centre, UAE</span>
+                  <div className="p-6">
+                    <h3 className="mb-2 text-xl font-semibold">{event.title}</h3>
+                    <div className="mb-4 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-gray-400" />
+                        <span className="text-sm text-gray-600">{event.date}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-gray-400" />
+                        <span className="text-sm text-gray-600">{event.location}</span>
+                      </div>
+                    </div>
+                    <p className="mb-6 text-gray-600">{event.description}</p>
+                    <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
+                      Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
                   </div>
                 </div>
-                <p className="mb-6 text-gray-600">
-                  Bringing together architects, engineers, and construction professionals to explore sustainable
-                  building practices.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
+              ))}
             </div>
+          )}
 
-            {/* Event 3 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Global Food & Beverage Expo"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Food & Beverage</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Global Food & Beverage Expo</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">January 20-23, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Dubai Exhibition Centre, UAE</span>
-                  </div>
-                </div>
-                <p className="mb-6 text-gray-600">
-                  The largest food and beverage exhibition in the region, featuring products from over 100 countries.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
+          {sortedEvents.length > 0 && (
+            <div className="mt-12 text-center">
+              <Button size="lg" className="rounded-full bg-black px-8 text-white hover:bg-gray-800">
+                Load More Events <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
-
-            {/* Event 4 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Digital Marketing Summit"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Marketing</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Digital Marketing Summit</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">February 15-16, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Hyderabad International Convention Centre, India</span>
-                  </div>
-                </div>
-                <p className="mb-6 text-gray-600">
-                  A conference for marketing professionals featuring workshops on SEO, social media, content marketing,
-                  and more.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Event 5 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Renewable Energy Conference"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Energy</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Renewable Energy Conference</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">March 8-10, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Riyadh International Convention Center, Saudi Arabia</span>
-                  </div>
-                </div>
-                <p className="mb-6 text-gray-600">
-                  Exploring the latest innovations in renewable energy technologies and sustainable power solutions.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Event 6 */}
-            <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Fintech Innovation Forum"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <Badge className="bg-white/20 text-white hover:bg-white/30">Finance</Badge>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Fintech Innovation Forum</h3>
-                <div className="mb-4 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">April 5-7, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">Dubai International Financial Centre, UAE</span>
-                  </div>
-                </div>
-                <p className="mb-6 text-gray-600">
-                  A gathering of financial technology leaders, innovators, and investors exploring the future of
-                  finance.
-                </p>
-                <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button size="lg" className="rounded-full bg-black px-8 text-white hover:bg-gray-800">
-              Load More Events <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
+          )}
         </div>
       </section>
 
@@ -368,8 +337,6 @@ export default function UpcomingEvents() {
           </div>
         </div>
       </section>
-
-      
     </div>
   )
 }
