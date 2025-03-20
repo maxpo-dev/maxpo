@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Globe, Lightbulb, Users, Building, Award, ChevronDown } from "lucide-react"
+import { ArrowRight, Globe, Lightbulb, Users, Building, Award } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
