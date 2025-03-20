@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative flex flex-col items-center justify-center overflow-hidden bg-blue-950 text-white">
         <div className="absolute inset-0 z-0">
           <Image
             src="/placeholder.svg?height=1080&width=1920"
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className="container relative z-10 mx-auto flex flex-col items-center px-4 py-32 text-center md:py-48">
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            Crafting Exceptional Experiences
+          Transforming Business Events with Innovation & Excellence
           </h1>
           <p className="mb-8 max-w-3xl text-lg text-gray-300 md:text-xl">
             Seamlessly Designed, Perfectly Delivered. Redefining the business event landscape through innovation and
@@ -37,13 +37,34 @@ export default function Home() {
           </Link>
 
         </div>
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+        {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center">
           <ChevronDown className="h-8 w-8 animate-bounce text-white opacity-70" />
-        </div>
+        </div> */}
       </section>
 
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
+            Maxpo Exhibitions
+            </h2>
+            <p className="mb-12 text-lg text-gray-600">
+            Maxpo Exhibitions is redefining the business event landscape by creating dynamic trade
+shows, conferences, and immersive experiences. Our focus on innovation and collaboration
+provides a platform for global leaders and decision-makers to shape the future of business.
+We are committed to quality and engagement, reimagining how industries connect while
+fostering new opportunities.
+Our headquarters are based in Dubai, serving as the central hub for our global operations,
+while our office in India plays a vital role in supporting our regional and international
+initiatives. We connect businesses across borders, creating impactful experiences that foster
+growth, innovation, and global success.
+            </p>
+          </div>
+          </div>
+        </section>
+
       {/* About Section */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
@@ -83,47 +104,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Chairman Message */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
-              Message from the Chairman
-            </h2>
-            <div className="relative rounded-3xl bg-white p-8 shadow-xl md:p-12">
-              <div className="absolute -top-12 left-1/2 h-24 w-24 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white shadow-lg">
-                <Image src="/placeholder.svg?height=200&width=200" alt="M. Inayat Sait" fill className="object-cover" />
-              </div>
-              <div className="mt-12 space-y-4 text-gray-700">
-                <p className="text-lg italic">
-                  &quot;At Maxpo, we don&apos;t just organize trade shows—we build platforms for progress. Our mission is to spark
-                  innovation, cultivate meaningful connections, and open new doors for businesses worldwide.&quot;
-                </p>
-                <p>
-                  &quot;Every event we create is designed to empower industries, drive collaboration, and shape the future of
-                  global commerce. Our vision is to transform trade shows into catalysts for industry evolution, making
-                  them more than just networking spaces but powerful engines for innovation and global impact.&quot;
-                </p>
-                <p>
-                  &quot;We see a world where exhibitions inspire breakthroughs, foster industry transformation, and generate
-                  lasting opportunities for businesses of all sizes. As we expand our global reach, our focus remains
-                  the same—delivering world-class experiences that fuel success and create value for every participant.&quot;
-                </p>
-                <p className="text-lg font-medium">
-                  &quot;Maxpo is where ideas take flight, industries converge, and businesses grow. We look forward to
-                  continuing this journey with you.&quot;
-                </p>
-                <p className="text-right font-semibold">— M. Inayat Sait, Chairman & Founder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Our Essence */}
-      <section className="bg-black py-24 text-white">
+      <section className="bg-blue-950 py-24 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Our Essence: Why Choose Maxpo?</h2>
@@ -134,7 +121,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="group rounded-2xl bg-gray-900 p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div className="group rounded-2xl bg-blue-900 p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
                 <Lightbulb className="h-6 w-6" />
               </div>
@@ -145,7 +132,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group rounded-2xl bg-gray-900 p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div className="group rounded-2xl bg-blue-900 p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
                 <Users className="h-6 w-6" />
               </div>
@@ -156,7 +143,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group rounded-2xl bg-gray-900 p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div className="group rounded-2xl bg-blue-900 p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
                 <Globe className="h-6 w-6" />
               </div>
@@ -167,7 +154,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group rounded-2xl bg-gray-900 p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div className="group rounded-2xl bg-blue-900 p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
                 <Award className="h-6 w-6" />
               </div>
@@ -178,7 +165,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group rounded-2xl bg-gray-900 p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div className="group rounded-2xl bg-blue-900 p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
                 <Building className="h-6 w-6" />
               </div>
@@ -250,8 +237,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Careers Section */}
+
       <section className="bg-gray-50 py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl py-12">
+              Message from the Chairman
+            </h2>
+            <div className="relative rounded-3xl bg-white p-8 shadow-xl md:p-12">
+              <div className="absolute -top-12 left-1/2 h-24 w-24 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white shadow-lg">
+                <Image src="/placeholder.svg?height=200&width=200" alt="M. Inayat Sait" fill className="object-cover" />
+              </div>
+              <div className="mt-12 space-y-4 text-gray-700">
+                <p className="text-lg italic">
+                  &quot;At Maxpo, we don&apos;t just organize trade shows—we build platforms for progress. Our mission is to spark
+                  innovation, cultivate meaningful connections, and open new doors for businesses worldwide.&quot;
+                </p>
+                {/* <p>
+                  &quot;Every event we create is designed to empower industries, drive collaboration, and shape the future of
+                  global commerce. Our vision is to transform trade shows into catalysts for industry evolution, making
+                  them more than just networking spaces but powerful engines for innovation and global impact.&quot;
+                </p>
+                <p>
+                  &quot;We see a world where exhibitions inspire breakthroughs, foster industry transformation, and generate
+                  lasting opportunities for businesses of all sizes. As we expand our global reach, our focus remains
+                  the same—delivering world-class experiences that fuel success and create value for every participant.&quot;
+                </p> */}
+                <p className="text-lg font-medium">
+                  &quot;Maxpo is where ideas take flight, industries converge, and businesses grow. We look forward to
+                  continuing this journey with you.&quot;
+                </p>
+                <p className="text-right font-semibold">— M. Inayat Sait, Chairman & Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      {/* <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Careers at Maxpo</h2>
@@ -271,10 +295,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section className="bg-black py-24 text-white">
+      <section className="bg-blue-950 py-24 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 text-3xl font-bold tracking-tight md:text-4xl">Get in Touch</h2>
