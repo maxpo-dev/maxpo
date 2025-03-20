@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+// import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)

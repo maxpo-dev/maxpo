@@ -35,7 +35,7 @@ export default function OurStory() {
             <p className="mb-16 text-lg text-gray-600">
               Maxpo: 20 Years of Excellence, 15 Years of Global Impact. For two decades, Maxpo has been at the forefront
               of the trade exhibition industry, creating transformative business experiences. Over the past 15 years,
-              we've expanded our expertise to international markets, delivering world-class exhibitions that drive
+              we&apos;ve expanded our expertise to international markets, delivering world-class exhibitions that drive
               growth, innovation, and lasting industry impact.
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function OurStory() {
               </div>
               <h3 className="mb-4 text-xl font-semibold">Client-Centric Approach</h3>
               <p className="text-gray-600">
-                Understanding and prioritizing our client's individual needs is at the center of our business. We adapt
+                Understanding and prioritizing our client&apos;s individual needs is at the center of our business. We adapt
                 our services to fit their objectives, ensuring unique experiences that yield success.
               </p>
             </div>
