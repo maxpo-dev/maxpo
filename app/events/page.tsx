@@ -114,9 +114,9 @@ export default function UpcomingEvents() {
   }
 
   // Handle sort change
-  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortOption(e.target.value)
-  }
+//   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+//     setSortOption(e.target.value)
+//   }
 
   return (
     <div className="flex min-h-screen flex-col">
