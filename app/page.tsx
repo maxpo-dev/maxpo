@@ -7,12 +7,11 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
 import { Typewriter } from "react-simple-typewriter"
-import { useState } from "react"
+// import { useState } from "react"
 // import bg from '@/public/images/Screenshot 2024-09-17 191356.png'
 // import Footer from "@/app/components/footer"
 
 export default function Home() {
-  const [isTyping, setIsTyping] = useState(true)
 
   // Sample upcoming events data
   const upcomingEvents = [
@@ -72,7 +71,7 @@ export default function Home() {
           </motion.h1>
 
           {/* Typewriter effect for p */}
-          <p className="mb-8 max-w-3xl text-lg text-black  md:text-xl">
+          <p className="mb-8 max-w-3xl text-lg text-gray-300 md:text-xl">
             <Typewriter
               words={[
                 "Seamlessly Designed, Perfectly Delivered. Redefining the business event landscape through innovation and collaboration.",
@@ -83,7 +82,6 @@ export default function Home() {
               typeSpeed={50}
               deleteSpeed={30}
               delaySpeed={2000}
-              onLoopDone={() => setIsTyping(false)}
             />
           </p>
 
@@ -242,7 +240,7 @@ export default function Home() {
                 Our Essence: <span className="text-blue-400">Why Choose Maxpo?</span>
               </h2>
               <p className="mb-16 text-lg text-gray-300 md:text-xl leading-relaxed">
-                Maxpo isn't just about hosting trade shows—we build thriving business ecosystems that spark innovation,
+                Maxpo isn&apos;t just about hosting trade shows—we build thriving business ecosystems that spark innovation,
                 foster powerful connections, and unlock global opportunities.
               </p>
             </motion.div>
@@ -302,7 +300,7 @@ export default function Home() {
               className="flex items-center justify-center rounded-2xl bg-white p-10 text-center text-black shadow-lg"
             >
               <p className="text-xl font-semibold italic leading-relaxed">
-                Maxpo isn't just where industries meet—it's where they grow, evolve, and redefine the future.
+                Maxpo isn&apos;t just where industries meet—it&apos;s where they grow, evolve, and redefine the future.
               </p>
             </motion.div>
           </div>
