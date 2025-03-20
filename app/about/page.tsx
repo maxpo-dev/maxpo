@@ -121,10 +121,10 @@ export default function OurStory() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-black py-24 text-white">
+      <section className="bg-blue-950 py-24 text-white">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 md:grid-cols-2">
-            <div className="rounded-2xl bg-gray-900 p-8 md:p-12">
+            <div className="rounded-2xl bg-blue-900 p-8 md:p-12">
               <h3 className="mb-6 text-2xl font-bold">Our Mission</h3>
               <p className="mb-6 text-gray-300">
                 To spark innovation, cultivate meaningful connections, and open new doors for businesses worldwide
@@ -136,7 +136,7 @@ export default function OurStory() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-gray-900 p-8 md:p-12">
+            <div className="rounded-2xl bg-blue-900 p-8 md:p-12">
               <h3 className="mb-6 text-2xl font-bold">Our Vision</h3>
               <p className="mb-6 text-gray-300">
                 To transform trade shows into catalysts for industry evolution, making them more than just networking

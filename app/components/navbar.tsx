@@ -59,7 +59,7 @@ export default function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium">
               Events <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
@@ -74,12 +74,13 @@ export default function Navbar() {
                 <Link href="/testimonials" className="w-full">Testimonials</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
-
+          </DropdownMenu> */}
+          <Link href="/events" className="text-sm font-medium">Events</Link>
           <Link href="/services" className="text-sm font-medium">Services</Link>
+          
           <Link href="/careers" className="text-sm font-medium">Careers</Link>
-          <Link href="/contact" className="text-sm font-medium">Contact</Link>
-          <Link href="/blog" className="text-sm font-medium">Blog</Link>
+          {/* <Link href="/contact" className="text-sm font-medium">Contact</Link> */}
+          {/* <Link href="/blog" className="text-sm font-medium">Blog</Link> */}
         </nav>
 
         {/* Desktop Get in Touch Button */}
@@ -133,8 +134,8 @@ export default function Navbar() {
 
             <Link href="/services" className="border-b pb-2 text-sm font-medium">Services</Link>
             <Link href="/careers" className="border-b pb-2 text-sm font-medium">Careers</Link>
-            <Link href="/contact" className="border-b pb-2 text-sm font-medium">Contact</Link>
-            <Link href="/blog" className="border-b pb-2 text-sm font-medium">Blog</Link>
+            {/* <Link href="/contact" className="border-b pb-2 text-sm font-medium">Contact</Link> */}
+            {/* <Link href="/blog" className="border-b pb-2 text-sm font-medium">Blog</Link> */}
 
             {/* Mobile Get in Touch Button */}
             <Link href="/contact">

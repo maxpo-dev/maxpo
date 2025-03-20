@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
 import { Typewriter } from "react-simple-typewriter"
 // import { useState } from "react"
-// import bg from '@/public/images/Screenshot 2024-09-17 191356.png'
 // import Footer from "@/app/components/footer"
 
 export default function Home() {
+  
 
   // Sample upcoming events data
   const upcomingEvents = [
@@ -49,15 +49,15 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-blue-500 to-blue-100 text-blue-950">
+      <section className="relative flex flex-col items-center justify-center overflow-hidden bg-blue-950 text-white">
         <div className="absolute inset-0 z-0">
-          {/* <Image
-            src={bg}
+          <Image
+            src="/placeholder.svg?height=1080&width=1920"
             alt="Exhibition hall"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-50"
             priority
-          /> */}
+          />
         </div>
         <div className="container relative z-10 mx-auto flex flex-col items-center px-4 py-32 text-center md:py-48">
           {/* Motion effect for h1 */}
@@ -93,8 +93,7 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section className="bg-gradient-to-b from-blue-100 to-blue-100 py-20">
+      <section className="bg-gradient-to-b from-white to-gray-100 py-20">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="mx-auto max-w-4xl text-center">
             {/* Animated Heading */}
@@ -137,9 +136,8 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Upcoming Events Section */}
-      <section className="py-24 bg-gradient-to-b from-blue-100 to-blue-300">
+      <section className="py-24 bg-gradient-to-b from-gray-100 to-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="mx-auto max-w-3xl text-center mb-16">
             <motion.div
@@ -225,8 +223,9 @@ export default function Home() {
       </section>
 
       
+
       {/* Our Essence */}
-      <section className="bg-gradient-to-b from-blue-300 to-blue-600 py-24 text-white">
+      <section className="bg-blue-950 py-24 text-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           {/* Section Header */}
           <div className="mx-auto max-w-3xl text-center">
@@ -240,7 +239,7 @@ export default function Home() {
                 Our Essence: <span className="text-blue-400">Why Choose Maxpo?</span>
               </h2>
               <p className="mb-16 text-lg text-gray-300 md:text-xl leading-relaxed">
-                Maxpo isn&apos;t just about hosting trade shows—we build thriving business ecosystems that spark innovation,
+                Maxpo isn't just about hosting trade shows—we build thriving business ecosystems that spark innovation,
                 foster powerful connections, and unlock global opportunities.
               </p>
             </motion.div>
@@ -300,14 +299,14 @@ export default function Home() {
               className="flex items-center justify-center rounded-2xl bg-white p-10 text-center text-black shadow-lg"
             >
               <p className="text-xl font-semibold italic leading-relaxed">
-                Maxpo isn&apos;t just where industries meet—it&apos;s where they grow, evolve, and redefine the future.
+                Maxpo isn't just where industries meet—it's where they grow, evolve, and redefine the future.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-blue-600 to-blue-950 py-24">
+      <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <motion.div
