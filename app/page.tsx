@@ -123,13 +123,13 @@ export default function Home() {
             <p className="mb-4 text-lg leading-relaxed text-gray-800 md:text-xl">
               Maxpo Exhibitions is redefining the business event landscape by creating dynamic trade shows, conferences,
               and immersive experiences. Our focus on
-              <span className="font-semibold text-blue-600"> innovation </span> and
-              <span className="font-semibold text-blue-600"> collaboration </span> provides a platform for global leaders
+              <span className="font-semibold text-black"> innovation </span> and
+              <span className="font-semibold text-black"> collaboration </span> provides a platform for global leaders
               and decision-makers to shape the future of business.
             </p>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-800 md:text-xl">
-              We are committed to <span className="font-semibold">quality</span> and <span className="font-semibold"> engagement</span>,
+              We are committed to <span className="font-semibold">Quality</span> and <span className="font-semibold"> Engagement</span>,
               reimagining how industries connect while fostering new opportunities.
             </p>
 
