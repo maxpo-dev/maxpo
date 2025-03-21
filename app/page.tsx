@@ -85,7 +85,7 @@ export default function Home() {
             />
           </p>
 
-          <Link href="/past-events">
+          <Link href="/events">
             <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">
               Discover Our Events <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
