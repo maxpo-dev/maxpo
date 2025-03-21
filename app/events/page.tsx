@@ -67,7 +67,7 @@ export default function UpcomingEvents() {
       description:
         "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology.",
       category: "Conferences",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM.jpeg",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 4.07.35 PM.jpeg",
       website: "https://www.futureproptechsummit.com/",
     },
   ]
