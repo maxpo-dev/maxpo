@@ -23,22 +23,22 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-white/90 text-black shadow-md backdrop-blur-md" : "bg-blue-950 text-white"
-      }`}
+    className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      isScrolled ? "bg-white shadow-md" : "bg-transparent"
+    }`}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        {/* Dynamic Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-10 w-32">
+       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
+        {/* Logo */}
+        <div className="relative h-8 w-32 md:w-40">
+          <Link href="/">
             <Image
-              src={isScrolled ? "/images/Maxpowhite.png" : "/Maxpo.png"} // Change logo based on scroll
+              src={isScrolled ? "/images/Maxpowhite.png" : "/images/Maxpo.png"} // Change logo based on scroll
               alt="Maxpo Logo"
               fill
               className="object-contain transition-all duration-300"
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
