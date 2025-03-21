@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Mail,  MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -91,10 +91,6 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 text-gray-400" />
                 <span className="text-gray-400">India Office</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400">+971 4 123 4567</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gray-400" />

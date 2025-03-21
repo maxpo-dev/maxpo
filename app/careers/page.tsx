@@ -43,7 +43,7 @@ export default function Careers() {
             {/* Benefit 1 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">1</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Innovation Culture</h3>
@@ -57,7 +57,7 @@ export default function Careers() {
             {/* Benefit 2 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">2</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Global Opportunities</h3>
@@ -72,7 +72,7 @@ export default function Careers() {
             {/* Benefit 3 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">3</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Professional Growth</h3>
@@ -86,7 +86,7 @@ export default function Careers() {
             {/* Benefit 4 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">4</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Collaborative Environment</h3>
@@ -100,7 +100,7 @@ export default function Careers() {
             {/* Benefit 5 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">5</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Work-Life Balance</h3>
@@ -114,7 +114,7 @@ export default function Careers() {
             {/* Benefit 6 */}
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                   <span className="text-lg font-bold">6</span>
                 </div>
                 <h3 className="mb-4 text-xl font-semibold">Impactful Work</h3>
@@ -223,7 +223,7 @@ export default function Careers() {
                       </ul>
                     </div>
                   </div>
-                  <Button className="rounded-full bg-black px-6 text-white hover:bg-gray-800">
+                  <Button className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800">
                     Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -267,7 +267,7 @@ export default function Careers() {
                       </ul>
                     </div>
                   </div>
-                  <Button className="rounded-full bg-black px-6 text-white hover:bg-gray-800">
+                  <Button className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800">
                     Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -374,7 +374,7 @@ export default function Careers() {
               Don&apos;t see a position that matches your skills? We&apos;re always looking for talented individuals to join our
               team.
             </p>
-            <Button size="lg" className="rounded-full bg-black px-8 text-white hover:bg-gray-800">
+            <Button size="lg" className="rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800">
               Submit Your Resume <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -422,7 +422,7 @@ export default function Careers() {
                 </p>
               </div>
 
-              <Button size="lg" className="mt-4 rounded-full bg-black px-8 text-white hover:bg-gray-800">
+              <Button size="lg" className="mt-4 rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800">
                 Apply for Internship <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -515,28 +515,33 @@ export default function Careers() {
       </section> */}
 
       {/* CTA Section */}
-      <section className="bg-black py-24 text-white">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Ready to Join Our Team?</h2>
-            <p className="mb-8 text-lg text-gray-300">
-              Explore our current opportunities and take the next step in your career with Maxpo.
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">
-                View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white px-8 text-white hover:bg-white hover:text-black"
-              >
-                Submit Your Resume
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="bg-gray-100 py-24 text-white">
+  <div className="container mx-auto px-4">
+    <div className="mx-auto max-w-3xl text-center">
+      <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
+        Ready to Join Our Team?
+      </h2>
+      <p className="mb-8 text-lg text-gray-300">
+        Explore our current opportunities and take the next step in your career with Maxpo.
+      </p>
+      <div className="flex flex-col justify-center gap-4 sm:flex-row">
+        <Button
+          size="lg"
+          className="rounded-full bg-white px-8 text-black hover:bg-gray-200 cursor-pointer"
+        >
+          View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          className="rounded-full border-white px-8 text-black hover:bg-white hover:text-black cursor-pointer"
+        >
+          Submit Your Resume
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   )
 }
