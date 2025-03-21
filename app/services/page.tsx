@@ -11,10 +11,10 @@ export default function Services() {
       
 
       {/* Hero Section */}
-      <section className="relative pt-20">
+      <section className="relative h-[80vh] pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/images/services/WhatsApp Image 2025-03-21 at 12.29.44 PM.jpeg"
             alt="Our Services"
             fill
             className="object-cover"
@@ -307,7 +307,7 @@ export default function Services() {
       </section>
 
       {/* Case Studies */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Success Stories</h2>
@@ -317,9 +317,9 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3"> */}
             {/* Case Study 1 */}
-            <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            {/* <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
               <div className="relative h-60 overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=400&width=600"
@@ -338,10 +338,10 @@ export default function Services() {
                   Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             {/* Case Study 2 */}
-            <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            {/* <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
               <div className="relative h-60 overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=400&width=600"
@@ -360,10 +360,10 @@ export default function Services() {
                   Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             {/* Case Study 3 */}
-            <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            {/* <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
               <div className="relative h-60 overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=400&width=600"
@@ -385,7 +385,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="bg-black py-24 text-white">

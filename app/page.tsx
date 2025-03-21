@@ -17,30 +17,30 @@ export default function Home() {
   const upcomingEvents = [
     {
       id: 1,
-      title: "Global Business Summit 2025",
-      date: "April 15-17, 2025",
-      location: "Dubai World Trade Centre",
+      title: "GMEC India 2025",
+      date: "April 25-27, 2025",
+      location: "Palace Ground, Bengaluru",
       image: "/images/events/WhatsApp Image 2025-03-20 at 6.01.11 PM.jpeg",
-      description: "Join industry leaders and innovators at our flagship business summit.",
-      category: "Conference",
+      description: "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
+      category: "Exhibition",
     },
     {
       id: 2,
-      title: "Tech Innovation Expo",
-      date: "May 22-24, 2025",
-      location: "India Expo Mart, Greater Noida",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Discover cutting-edge technologies shaping the future of business.",
+      title: "Gulf News presents India Property Show",
+      date: "17-18 May 2025",
+      location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
+      description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
       category: "Exhibition",
     },
     {
       id: 3,
-      title: "Sustainable Business Forum",
-      date: "June 10-12, 2025",
-      location: "Abu Dhabi National Exhibition Centre",
-      image: "/placeholder.svg?height=600&width=800",
-      description: "Explore sustainable practices and green innovations for modern businesses.",
-      category: "Forum",
+      title: "Future Digitech Summit & Awards 2025",
+      date: "28-29 May 2025",
+      location: "Pullman, Kuala Lumpur City Centre, Malaysia",
+      image: "/images/events/WhatsApp Image 2025-03-20 at 6.26.32 PM (2).jpeg",
+      description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
+      category: "Conference and Awards",
     },
   ]
 
@@ -93,48 +93,58 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-gray-100 py-20">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16">
-          <div className="mx-auto max-w-4xl text-center">
-            {/* Animated Heading */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+      <section className="relative py-24 bg-gray-100 overflow-hidden">
+      {/* Background Image */}
+      {/* <div className="absolute inset-0">
+        <Image
+          src=""
+          alt="Maxpo Exhibition"
+          layout="fill"
+          objectFit="cover"
+          quality={90}
+          className="opacity-30"
+        />
+      </div> */}
+
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-4xl text-center">
+          {/* Animated Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
+              Maxpo Exhibitions
+            </h2>
+
+            {/* Styled Paragraph */}
+            <p className="mb-4 text-lg leading-relaxed text-gray-800 md:text-xl">
+              Maxpo Exhibitions is redefining the business event landscape by creating dynamic trade shows, conferences,
+              and immersive experiences. Our focus on
+              <span className="font-semibold text-blue-600"> innovation </span> and
+              <span className="font-semibold text-blue-600"> collaboration </span> provides a platform for global leaders
+              and decision-makers to shape the future of business.
+            </p>
+
+            <p className="mb-6 text-lg leading-relaxed text-gray-800 md:text-xl">
+              We are committed to <span className="font-semibold">quality</span> and <span className="font-semibold"> engagement</span>,
+              reimagining how industries connect while fostering new opportunities.
+            </p>
+
+            {/* Call to Action Button */}
+            {/* <motion.a
+              href="#contact"
+              className="inline-block bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+              whileHover={{ scale: 1.05 }}
             >
-              <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
-                Maxpo Exhibitions
-              </h2>
-
-              {/* Styled Paragraph */}
-              <p className="mb-1 text-lg leading-relaxed text-gray-700 md:text-xl">
-                Maxpo Exhibitions is redefining the business event landscape by creating dynamic trade shows,
-                conferences, and immersive experiences. Our focus on
-                <span className="font-semibold text-blue-600"> innovation </span> and
-                <span className="font-semibold text-blue-600"> collaboration </span> provides a platform for global
-                leaders and decision-makers to shape the future of business.
-              </p>
-
-              <p className="mb-1 text-lg leading-relaxed text-gray-700 md:text-xl">
-                We are committed to <span className="font-semibold">quality</span> and
-                <span className="font-semibold"> engagement</span>, reimagining how industries connect while fostering
-                new opportunities.
-              </p>
-
-              <p className="text-lg leading-relaxed text-gray-700 md:text-xl">
-                Our headquarters are based in <span className="font-semibold text-blue-600">Dubai</span>, serving as the
-                central hub for our global operations, while our office in
-                <span className="font-semibold text-blue-600"> India</span> plays a vital role in supporting our
-                regional and international initiatives. We connect businesses across borders, creating impactful
-                experiences that foster <span className="font-semibold">growth</span>,
-                <span className="font-semibold"> innovation</span>, and
-                <span className="font-semibold"> global success</span>.
-              </p>
-            </motion.div>
-          </div>
+              Learn More
+            </motion.a> */}
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section className="relative bg-gradient-to-b from-gray-100 to-white py-24">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
@@ -222,7 +232,7 @@ export default function Home() {
 
         {/* View All Events Button */}
         <div className="mt-16 text-center">
-          <Link href="/all-events">
+          <Link href="/events">
             <Button className="rounded-full bg-blue-950 px-8 py-6 text-white hover:bg-blue-900 transition-all duration-300 shadow-lg">
               View All Events <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -334,7 +344,7 @@ export default function Home() {
               className="relative rounded-3xl bg-white p-8 shadow-xl md:p-12"
             >
               <div className="absolute -top-12 left-1/2 h-24 w-24 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white shadow-lg">
-                <Image src="/placeholder.svg?height=200&width=200" alt="M. Inayat Sait" fill className="object-cover" />
+                <Image src="/images/Layer 1.jpg" alt="M. Inayat Sait" fill className="object-cover" />
               </div>
               <div className="mt-12 space-y-4 text-gray-700">
                 <p className="text-lg italic">

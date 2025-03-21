@@ -9,10 +9,10 @@ export default function Careers() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative pt-20">
+      <section className="relative h-[80vh] pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/images/careers/WhatsApp Image 2025-03-21 at 12.41.51 PM.jpeg"
             alt="Careers at Maxpo"
             fill
             className="object-cover"
@@ -134,7 +134,7 @@ export default function Careers() {
           <div className="grid gap-12 md:grid-cols-2">
             <div className="relative h-[400px] overflow-hidden rounded-2xl md:h-auto">
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="/images/careers/WhatsApp Image 2025-03-21 at 2.34.40 PM.jpeg"
                 alt="Maxpo Team Culture"
                 fill
                 className="object-cover"
@@ -393,7 +393,7 @@ export default function Careers() {
 
           <div className="grid gap-8 md:grid-cols-2">
             <div className="relative h-[400px] overflow-hidden rounded-2xl md:h-auto">
-              <Image src="/placeholder.svg?height=800&width=600" alt="Maxpo Interns" fill className="object-cover" />
+              <Image src="/images/careers/WhatsApp Image 2025-03-21 at 2.46.38 PM.jpeg" alt="Maxpo Interns" fill className="object-cover" />
             </div>
             <div className="flex flex-col justify-center space-y-6">
               <div>
@@ -431,7 +431,7 @@ export default function Careers() {
       </section>
 
       {/* Employee Testimonials */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">What Our Team Says</h2>
@@ -440,7 +440,7 @@ export default function Careers() {
 
           <div className="grid gap-8 md:grid-cols-3">
             {/* Testimonial 1 */}
-            <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
+            {/* <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
               <div className="mb-6 flex items-center gap-4">
                 <div className="h-16 w-16 overflow-hidden rounded-full">
                   <Image
@@ -464,7 +464,7 @@ export default function Careers() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
+            {/* <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
               <div className="mb-6 flex items-center gap-4">
                 <div className="h-16 w-16 overflow-hidden rounded-full">
                   <Image
@@ -485,10 +485,10 @@ export default function Careers() {
                 you to take ownership of your work while having the resources you need to succeed. The team is
                 passionate, innovative, and always pushing boundaries.&quot;
               </p>
-            </div>
+            </div> */}
 
             {/* Testimonial 3 */}
-            <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
+            {/* <div className="rounded-xl bg-gray-50 p-8 shadow-sm">
               <div className="mb-6 flex items-center gap-4">
                 <div className="h-16 w-16 overflow-hidden rounded-full">
                   <Image
@@ -512,7 +512,7 @@ export default function Careers() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="bg-black py-24 text-white">

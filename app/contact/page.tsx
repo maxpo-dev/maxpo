@@ -30,9 +30,9 @@ export default function Contact() {
 
 
       {/* Hero Section */}
-      <section className="relative pt-20">
+      <section className="relative h-[80vh] pt-20">
         <div className="absolute inset-0 z-0">
-          <Image src="/placeholder.svg?height=600&width=1920" alt="Contact Us" fill className="object-cover" priority />
+          <Image src="/images/contact/WhatsApp Image 2025-03-21 at 2.21.58 PM.jpeg" alt="Contact Us" fill className="" priority />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">

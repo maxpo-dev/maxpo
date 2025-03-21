@@ -1,17 +1,15 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Calendar, MapPin, Users } from "lucide-react"
-
+import { ArrowRight, Calendar, MapPin } from "lucide-react"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 // Define event types
-type EventType = "All Events" | "Trade Shows" | "Conferences" | "Corporate Events"
+type EventType = "All Events" | "Exhibition" | "Conferences" | "Conference and Awards"
 
 // Define event interface
 interface Event {
@@ -22,6 +20,7 @@ interface Event {
   description: string
   category: string
   image: string
+  website: string
 }
 
 export default function UpcomingEvents() {
@@ -29,68 +28,53 @@ export default function UpcomingEvents() {
   const eventsData: Event[] = [
     {
       id: 1,
-      title: "Healthcare Innovation Expo",
-      date: "November 5-7, 2023",
-      location: "Mumbai Exhibition Centre, India",
+      title: "GMEC India 2025",
+      date: "April 25-27, 2025",
+      location: "Palace Ground, Bengaluru",
+      image: "/images/events/WhatsApp Image 2025-03-20 at 6.01.11 PM.jpeg",
       description:
-        "Showcasing the latest advancements in healthcare technology, medical devices, and digital health solutions.",
-      category: "Trade Shows",
-      image: "/placeholder.svg?height=400&width=600",
+        "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
+      category: "Exhibition",
+      website: "https://gmecexhibitions.in/",
     },
     {
       id: 2,
-      title: "Sustainable Construction Forum",
-      date: "December 10-12, 2023",
-      location: "Abu Dhabi National Exhibition Centre, UAE",
+      title: "Gulf News presents India Property Show",
+      date: "17-18 May 2025",
+      location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
       description:
-        "Bringing together architects, engineers, and construction professionals to explore sustainable building practices.",
-      category: "Conferences",
-      image: "/placeholder.svg?height=400&width=600",
+        "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
+      category: "Exhibition",
+      website: "",
     },
     {
       id: 3,
-      title: "Global Food & Beverage Expo",
-      date: "January 20-23, 2024",
-      location: "Dubai Exhibition Centre, UAE",
+      title: "Future Digitech Summit & Awards 2025",
+      date: "28-29 May 2025",
+      location: "Pullman, Kuala Lumpur City Centre, Malaysia",
+      image: "/images/events/WhatsApp Image 2025-03-20 at 6.26.32 PM (2).jpeg",
       description:
-        "The largest food and beverage exhibition in the region, featuring products from over 100 countries.",
-      category: "Trade Shows",
-      image: "/placeholder.svg?height=400&width=600",
+        "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
+      category: "Conference and Awards",
+      website: "https://www.futuredigitechsummit.com/",
     },
     {
       id: 4,
-      title: "Digital Marketing Summit",
-      date: "February 15-16, 2024",
-      location: "Hyderabad International Convention Centre, India",
+      title: "Future Proptech Summit",
+      date: "14-15 October 2025",
+      location: "Le Méridien Hotel, Airport Road, Dubai",
       description:
-        "A conference for marketing professionals featuring workshops on SEO, social media, content marketing, and more.",
+        "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology.",
       category: "Conferences",
-      image: "/placeholder.svg?height=400&width=600",
-    },
-    {
-      id: 5,
-      title: "Renewable Energy Conference",
-      date: "March 8-10, 2024",
-      location: "Riyadh International Convention Center, Saudi Arabia",
-      description: "Exploring the latest innovations in renewable energy technologies and sustainable power solutions.",
-      category: "Conferences",
-      image: "/placeholder.svg?height=400&width=600",
-    },
-    {
-      id: 6,
-      title: "Fintech Innovation Forum",
-      date: "April 5-7, 2024",
-      location: "Dubai International Financial Centre, UAE",
-      description:
-        "A gathering of financial technology leaders, innovators, and investors exploring the future of finance.",
-      category: "Corporate Events",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM.jpeg",
+      website: "https://www.futureproptechsummit.com/",
     },
   ]
 
   // State for active filter and sorted events
   const [activeFilter, setActiveFilter] = useState<EventType>("All Events")
-  const [sortOption, setSortOption] = useState<string>("Date: Nearest first")
+  const sortOption = "Date: Nearest first"
 
   // Filter events based on active filter
   const filteredEvents = eventsData.filter((event) => activeFilter === "All Events" || event.category === activeFilter)
@@ -114,17 +98,18 @@ export default function UpcomingEvents() {
   }
 
   // Handle sort change
-//   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-//     setSortOption(e.target.value)
-//   }
+  //   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  //     setSortOption(e.target.value)
+  //   }
 
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative pt-20">
-        <div className="absolute inset-0 z-0">
+      <section className="relative  h-[80vh] flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/images/events/WhatsApp Image 2025-03-21 at 12.07.40 PM.jpeg"
             alt="Upcoming Events"
             fill
             className="object-cover"
@@ -132,11 +117,24 @@ export default function UpcomingEvents() {
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">Upcoming Events</h1>
-          <p className="max-w-2xl text-lg text-gray-300 md:text-xl">
+
+        <div className="relative text-center text-white px-6 md:px-12">
+          <motion.h1
+            className="text-9xl font-bold tracking-tight md:text-6xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Events
+          </motion.h1>
+          <motion.p
+            className="max-w-2xl mx-auto mt-4 text-lg text-gray-300 md:text-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
             Discover our upcoming exhibitions and conferences around the world.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -153,11 +151,11 @@ export default function UpcomingEvents() {
                 All Events
               </Badge>
               <Badge
-                variant={activeFilter === "Trade Shows" ? "default" : "outline"}
-                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Trade Shows" ? "bg-black text-white" : "bg-gray-100"}`}
-                onClick={() => handleFilterChange("Trade Shows")}
+                variant={activeFilter === "Exhibition" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Exhibition" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("Exhibition")}
               >
-                Trade Shows
+                Exhibition
               </Badge>
               <Badge
                 variant={activeFilter === "Conferences" ? "default" : "outline"}
@@ -167,11 +165,11 @@ export default function UpcomingEvents() {
                 Conferences
               </Badge>
               <Badge
-                variant={activeFilter === "Corporate Events" ? "default" : "outline"}
-                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Corporate Events" ? "bg-black text-white" : "bg-gray-100"}`}
-                onClick={() => handleFilterChange("Corporate Events")}
+                variant={activeFilter === "Conference and Awards" ? "default" : "outline"}
+                className={`rounded-full px-4 py-2 cursor-pointer ${activeFilter === "Conference and Awards" ? "bg-black text-white" : "bg-gray-100"}`}
+                onClick={() => handleFilterChange("Conference and Awards")}
               >
-                Corporate Events
+                Conference and Awards
               </Badge>
             </div>
             {/* <div className="flex items-center gap-2">
@@ -192,7 +190,7 @@ export default function UpcomingEvents() {
       </section>
 
       {/* Featured Event */}
-      <section className="bg-white py-12">
+      {/* <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <div className="overflow-hidden rounded-2xl bg-blue-950">
             <div className="grid md:grid-cols-2">
@@ -238,7 +236,7 @@ export default function UpcomingEvents() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Upcoming Events List */}
       <section className="bg-white py-12">
@@ -258,12 +256,12 @@ export default function UpcomingEvents() {
                   key={event.id}
                   className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-80 overflow-hidden">
                     <Image
                       src={event.image || "/placeholder.svg"}
                       alt={event.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                       <Badge className="bg-white/20 text-white hover:bg-white/30">{event.category}</Badge>
@@ -282,7 +280,7 @@ export default function UpcomingEvents() {
                       </div>
                     </div>
                     <p className="mb-6 text-gray-600">{event.description}</p>
-                    <Link href="#" className="inline-flex items-center text-sm font-medium text-black">
+                    <Link href={event.website} className="inline-flex items-center text-sm font-medium text-black">
                       Learn More <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </div>
