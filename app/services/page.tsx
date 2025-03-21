@@ -45,7 +45,7 @@ export default function Services() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Service 1 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <Globe className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Trade Show Management</h3>
@@ -78,7 +78,7 @@ export default function Services() {
 
             {/* Service 2 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <Users className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Conference Organization</h3>
@@ -111,7 +111,7 @@ export default function Services() {
 
             {/* Service 3 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <Calendar className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Corporate Events</h3>
@@ -144,7 +144,7 @@ export default function Services() {
 
             {/* Service 4 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <Lightbulb className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Exhibition Design & Build</h3>
@@ -177,7 +177,7 @@ export default function Services() {
 
             {/* Service 5 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <BarChart className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Digital & Hybrid Events</h3>
@@ -209,7 +209,7 @@ export default function Services() {
 
             {/* Service 6 */}
             <div className="group rounded-xl border border-gray-200 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <Megaphone className="h-6 w-6" />
               </div>
               <h3 className="mb-4 text-xl font-semibold">Marketing & Promotion</h3>
@@ -257,7 +257,7 @@ export default function Services() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Step 1 */}
             <div className="relative rounded-xl bg-white p-8 shadow-md">
-              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <span className="text-lg font-bold">1</span>
               </div>
               <h3 className="mb-4 mt-6 text-xl font-semibold">Discovery</h3>
@@ -269,7 +269,7 @@ export default function Services() {
 
             {/* Step 2 */}
             <div className="relative rounded-xl bg-white p-8 shadow-md">
-              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <span className="text-lg font-bold">2</span>
               </div>
               <h3 className="mb-4 mt-6 text-xl font-semibold">Planning</h3>
@@ -281,7 +281,7 @@ export default function Services() {
 
             {/* Step 3 */}
             <div className="relative rounded-xl bg-white p-8 shadow-md">
-              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <span className="text-lg font-bold">3</span>
               </div>
               <h3 className="mb-4 mt-6 text-xl font-semibold">Execution</h3>
@@ -293,7 +293,7 @@ export default function Services() {
 
             {/* Step 4 */}
             <div className="relative rounded-xl bg-white p-8 shadow-md">
-              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+              <div className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white">
                 <span className="text-lg font-bold">4</span>
               </div>
               <h3 className="mb-4 mt-6 text-xl font-semibold">Evaluation</h3>
@@ -306,7 +306,40 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Case Studies */}
+      
+      {/* CTA Section */}
+      <section className="bg-gray-100 py-24 text-white">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-blue-950">
+              Ready to Create an Exceptional Event?
+            </h2>
+            <p className="mb-8 text-lg text-black">
+              Let&apos;s work together to create an exhibition experience that drives business growth and fosters meaningful
+              connections.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-300">
+                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white px-8 text-black hover:bg-gray-300 hover:text-black"
+              >
+                View Our Portfolio
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </div>
+  )
+}
+
+{/* Case Studies */}
       {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
@@ -386,36 +419,3 @@ export default function Services() {
           </div>
         </div>
       </section> */}
-
-      {/* CTA Section */}
-      <section className="bg-black py-24 text-white">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
-              Ready to Create an Exceptional Event?
-            </h2>
-            <p className="mb-8 text-lg text-gray-300">
-              Let&apos;s work together to create an exhibition experience that drives business growth and fosters meaningful
-              connections.
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200">
-                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white px-8 text-white hover:bg-white hover:text-black"
-              >
-                View Our Portfolio
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-    </div>
-  )
-}
-

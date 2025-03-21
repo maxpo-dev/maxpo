@@ -23,6 +23,7 @@ export default function Home() {
       image: "/images/events/WhatsApp Image 2025-03-20 at 6.01.11 PM.jpeg",
       description: "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
       category: "Exhibition",
+      website: "https://gmecexhibitions.in/",
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ export default function Home() {
       image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
       description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
       category: "Exhibition",
+      website: "",
     },
     {
       id: 3,
@@ -41,6 +43,7 @@ export default function Home() {
       image: "/images/events/WhatsApp Image 2025-03-20 at 6.26.32 PM (2).jpeg",
       description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
       category: "Conference and Awards",
+      website:"https://www.futureproptechsummit.com/",
     },
   ]
 
@@ -166,69 +169,65 @@ export default function Home() {
         </div>
 
         {/* Event Cards Grid */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {upcomingEvents.map((event, index) => (
-            <motion.div
-              key={event.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              {/* Image */}
-              <div className="relative h-65  overflow-hidden rounded-t-3xl">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  // className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
-                  {event.category}
-                </div>
-              </div>
-
-              {/* Card Content */}
-              <div className="p-6 bg-white backdrop-blur-lg rounded-b-3xl">
-                <h3 className="mb-3 text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                  {event.title}
-                </h3>
-                <p className="mb-4 text-gray-600">{event.description}</p>
-
-                {/* Event Details */}
-                <div className="space-y-2 text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <Calendar className="mr-2 h-4 w-4 text-blue-600" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="mr-2 h-4 w-4 text-blue-600" />
-                    <span>{event.location}</span>
-                  </div>
-                </div>
-
-                {/* Buttons */}
-                <div className="mt-6 flex justify-between items-center">
-                  <Link href={`/events/${event.id}`}>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                    >
-                      Learn More
-                    </Button>
-                  </Link>
-                  <Link href={`/register/${event.id}`}>
-                    <Button size="sm" className="rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300">
-                      Register Now
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+  {upcomingEvents.map((event, index) => (
+    <motion.div
+      key={event.id}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300"
+    >
+      {/* Image */}
+      <div className="relative h-[250px] overflow-hidden rounded-t-3xl">
+        <Image
+          src={event.image}
+          alt={event.title}
+          fill
+          className=" w-full h-full transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
+          {event.category}
         </div>
+      </div>
+
+      {/* Card Content */}
+      <div className="flex flex-col flex-grow p-6 bg-white backdrop-blur-lg rounded-b-3xl">
+        <h3 className="mb-3 text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+          {event.title}
+        </h3>
+        <p className="mb-4 text-gray-600 flex-grow">{event.description}</p>
+
+        {/* Event Details */}
+        <div className="space-y-2 text-sm text-gray-500">
+          <div className="flex items-center">
+            <Calendar className="mr-2 h-4 w-4 text-blue-600" />
+            <span>{event.date}</span>
+          </div>
+          <div className="flex items-center">
+            <MapPin className="mr-2 h-4 w-4 text-blue-600" />
+            <span>{event.location}</span>
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="mt-auto flex justify-between items-center pt-4">
+          <Link href={event.website}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
+            >
+              Visit Site
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
 
         {/* View All Events Button */}
         <div className="mt-16 text-center">
