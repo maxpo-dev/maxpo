@@ -4,11 +4,11 @@ import type React from "react"
 
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, Mail, Phone, MapPin, Send } from "lucide-react"
+// import Link from "next/link"
+import { ArrowRight ,Send } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -30,25 +30,25 @@ export default function Contact() {
 
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] pt-20">
+      <section className="relative h-[100vh] pt-20">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/contact/WhatsApp Image 2025-03-21 at 2.21.58 PM.jpeg" alt="Contact Us" fill className="" priority />
+          <Image src="/images/contact/WhatsApp Image 2025-03-21 at 6.00.08 PM.jpeg" alt="Contact Us" fill className="" priority />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
+        {/* <div className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40">
           <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">Get in Touch</h1>
           <p className="max-w-2xl text-lg text-gray-300 md:text-xl">
             Have a question or ready to create an exceptional exhibition experience? We&apos;re here to help.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* Contact Information */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-3">
             {/* Dubai Office */}
-            <Card className="overflow-hidden">
+            {/* <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image src="/placeholder.svg?height=400&width=600" alt="Dubai Office" fill className="object-cover" />
               </div>
@@ -69,10 +69,10 @@ export default function Contact() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </Card> */}
 
             {/* India Office */}
-            <Card className="overflow-hidden">
+            {/* <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image src="/placeholder.svg?height=400&width=600" alt="India Office" fill className="object-cover" />
               </div>
@@ -87,16 +87,16 @@ export default function Contact() {
                     <Phone className="h-5 w-5 text-gray-500" />
                     <span className="text-gray-600">+91 22 987 6543</span>
                   </li> */}
-                  <li className="flex items-center gap-3">
+                  {/* <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-gray-500" />
                     <span className="text-gray-600">india@maxpo.com</span>
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </Card> */} 
 
             {/* General Inquiries */}
-            <Card className="overflow-hidden">
+            {/* <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
                   src="/placeholder.svg?height=400&width=600"
@@ -162,7 +162,7 @@ export default function Contact() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */} 
 
       {/* Contact Form */}
       <section className="bg-gray-50 py-24">
@@ -280,7 +280,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Visit Us</h2>
@@ -298,7 +298,7 @@ export default function Contact() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

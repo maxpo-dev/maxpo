@@ -12,10 +12,10 @@ export default function Careers() {
       <section className="relative h-[80vh] pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/careers/WhatsApp Image 2025-03-21 at 12.41.51 PM.jpeg"
+            src="/images/careers/WhatsApp Image 2025-03-21 at 2.33.02 PM.jpeg"
             alt="Careers at Maxpo"
             fill
-            className="object-cover"
+            className=""
             priority
           />
           <div className="absolute inset-0 bg-black/60" />
