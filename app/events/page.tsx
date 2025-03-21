@@ -316,6 +316,7 @@ export default function UpcomingEvents() {
                     }}
                   >
                     <div className="relative h-80 overflow-hidden">
+                      
                       <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }} className="h-full w-full">
                         <Image
                           src={event.image || "/placeholder.svg"}
@@ -324,15 +325,11 @@ export default function UpcomingEvents() {
                           className="object-cover"
                         />
                       </motion.div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.1 * index, duration: 0.3 }}
-                        >
-                          <Badge className="bg-white/20 text-white hover:bg-white/30">{event.category}</Badge>
-                        </motion.div>
-                      </div>
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
+          {event.category}
+        </div>
+                      
+
                     </div>
                     <motion.div
                       className="p-6"
