@@ -36,8 +36,8 @@ export default function Values() {
               className="rounded-xl border border-gray-200 p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Circle Number */}
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
-                <span className="text-2xl font-bold">{value.number}</span>
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-950">
+                <span className="text-2xl text-white font-bold">{value.number}</span>
               </div>
 
               {/* Title & Description */}
