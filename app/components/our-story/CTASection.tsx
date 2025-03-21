@@ -28,7 +28,7 @@ export default function CTASection() {
               Upcoming Events <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
 
-            {/* Navigate to Contact Us Page */}
+            {/* Navigate to Contact Us Page. */}
             <Button
               size="lg"
               variant="outline"
