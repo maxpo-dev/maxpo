@@ -400,7 +400,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Link
-                  href="/upcoming-events"
+                  href="/events"
                   className="flex flex-col items-center justify-center rounded-2xl bg-white p-8 text-black transition-transform duration-300 hover:-translate-y-2"
                 >
                   <h3 className="mb-2 text-xl font-semibold">Upcoming Events</h3>
