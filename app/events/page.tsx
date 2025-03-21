@@ -256,7 +256,7 @@ export default function UpcomingEvents() {
                   <Badge
                     variant={activeFilter === filter ? "default" : "outline"}
                     className={`rounded-full px-4 py-2 cursor-pointer ${
-                      activeFilter === filter ? "bg-black text-white" : "bg-gray-100"
+                      activeFilter === filter ? "bg-blue-950 text-white" : "bg-gray-100"
                     }`}
                     onClick={() => handleFilterChange(filter as EventType)}
                   >
@@ -488,7 +488,7 @@ export default function UpcomingEvents() {
 
       {/* Newsletter with Floating Animation */}
       <motion.section
-        className="bg-black py-24 text-white"
+        className="bg-gray-100 py-24 text-white"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -503,7 +503,7 @@ export default function UpcomingEvents() {
             transition={{ duration: 0.6 }}
           >
             <motion.h2
-              className="mb-6 text-3xl font-bold tracking-tight md:text-4xl"
+              className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-blue-950"
               animate={{
                 textShadow: [
                   "0 0 0px rgba(255,255,255,0)",
@@ -519,7 +519,7 @@ export default function UpcomingEvents() {
             >
               Stay Updated
             </motion.h2>
-            <p className="mb-8 text-lg text-gray-300">
+            <p className="mb-8 text-lg text-black ">
               Subscribe to our newsletter to receive updates on upcoming events, early bird discounts, and industry
               insights.
             </p>
@@ -533,7 +533,7 @@ export default function UpcomingEvents() {
               <motion.input
                 type="email"
                 placeholder="Your email address"
-                className="flex-1 rounded-full border-none bg-white/10 px-6 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="flex-1 rounded-full border-none bg-black/10 px-6 py-3 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
                 whileFocus={{ scale: 1.02, boxShadow: "0 0 0 2px rgba(255,255,255,0.3)" }}
                 transition={{ duration: 0.2 }}
               />
