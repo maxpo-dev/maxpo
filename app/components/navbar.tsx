@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Desktop "Get in Touch" Button */}
         <div className="hidden md:block">
           <Link href="/contact">
-            <Button className="rounded-full bg-black text-white px-6 py-2 hover:bg-gray-800">
+            <Button className="rounded-full bg-white text-black px-6 py-2 hover:bg-gray-800">
               Get in Touch
             </Button>
           </Link>
