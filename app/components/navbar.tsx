@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <div className="relative h-10 w-32">
             <Image
-              src={isScrolled ? "/Maxpo_Logo_Black.png" : "/Maxpo.png"} // Change logo based on scroll
+              src={isScrolled ? "/Maxpowhite.png" : "/Maxpo.png"} // Change logo based on scroll
               alt="Maxpo Logo"
               fill
               className="object-contain transition-all duration-300"
