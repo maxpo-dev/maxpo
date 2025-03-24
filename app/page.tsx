@@ -312,7 +312,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center rounded-2xl bg-white p-10 text-center text-black shadow-lg"
+              className="flex items-center justify-center rounded-2xl bg-blue-900 p-10 text-center text-white shadow-lg"
             >
               <p className="text-xl font-semibold italic leading-relaxed">
                 Maxpo isn&apos;t just where industries meet—it&apos;s where they grow, evolve, and redefine the future.
