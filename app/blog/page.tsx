@@ -10,8 +10,6 @@ import { Input } from "@/components/ui/input"
 export default function Blog() {
   return (
     <div className="flex min-h-screen flex-col">
-
-
       {/* Hero Section */}
       <section className="relative pt-20">
         <div className="absolute inset-0 z-0">
