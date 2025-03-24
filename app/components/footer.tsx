@@ -26,19 +26,19 @@ export default function Footer() {
               experiences.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link href="https://www.facebook.com/maxpoexhibitions" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link href="https://x.com/maxpoae" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link href="https://www.instagram.com/maxpoexhibitions/" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link href="https://www.linkedin.com/company/maxpoexhibitions/" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
