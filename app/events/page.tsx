@@ -47,7 +47,7 @@ export default function UpcomingEvents() {
       description:
         "India's real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
       category: "Exhibition",
-      website: "",
+      website: "https://www.indiapropertyshow.in/",
     },
     {
       id: 3,

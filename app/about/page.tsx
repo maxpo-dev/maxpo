@@ -10,7 +10,6 @@ export default function OurStory() {
        <HeroSection />
        <MissionVision />
       <Timeline />
-     
       <Values />
       <CTASection />
     </div>

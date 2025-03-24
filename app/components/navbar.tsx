@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Desktop "Get in Touch" Button */}
         <div className="hidden md:block">
           <Link href="/contact">
-            <Button className="rounded-full bg-white text-black px-6 py-2 hover:bg-gray-800">
+            <Button className="rounded-full bg-white text-black px-6 py-2 hover:bg-gray-800 hover:text-white">
               Get in Touch
             </Button>
           </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
-          {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMobileMenuOpen ? <X className="h-6 w-6 bg-amber-50" /> : <Menu className="h-6 w-6 bg-amber-50" />}
         </button>
       </div>
 
@@ -52,9 +52,9 @@ export default function Navbar() {
 
             {/* Mobile "Get in Touch" Button */}
             <Link href="/contact">
-              <Button className="mt-4 w-full rounded-full bg-black text-white py-2 hover:bg-gray-800">
-                Get in Touch
-              </Button>
+            <Button className="mt-4 w-full rounded-full bg-black text-white py-2 hover:bg-gray-800 hover:text-white">
+  Get in Touch
+</Button>
             </Link>
           </nav>
         </div>
