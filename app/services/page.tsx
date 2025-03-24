@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Globe, Users, Calendar, Lightbulb, BarChart, Megaphone } from "lucide-react"
+import { ArrowRight, CheckCircle, Globe, Users, Calendar,  BarChart, Megaphone } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -150,18 +150,18 @@ export default function Services() {
                   "Branding and experiential design",
                 ],
               },
-              {
-                icon: <Lightbulb className="h-6 w-6" />,
-                title: "Exhibition Design & Build",
-                description:
-                  "Creative and innovative exhibition stand design and construction services, creating impactful brand experiences.",
-                features: [
-                  "Custom stand design and visualization",
-                  "Modular and custom build solutions",
-                  "Graphics production and installation",
-                  "Furniture and equipment rental",
-                ],
-              },
+              // {
+              //   icon: <Lightbulb className="h-6 w-6" />,
+              //   title: "Exhibition Design & Build",
+              //   description:
+              //     "Creative and innovative exhibition stand design and construction services, creating impactful brand experiences.",
+              //   features: [
+              //     "Custom stand design and visualization",
+              //     "Modular and custom build solutions",
+              //     "Graphics production and installation",
+              //     "Furniture and equipment rental",
+              //   ],
+              // },
               {
                 icon: <BarChart className="h-6 w-6" />,
                 title: "Digital & Hybrid Events",
