@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Globe, Users, Calendar,  BarChart, Megaphone } from "lucide-react"
+import { ArrowRight, CheckCircle, Globe, Users, Calendar,  BarChart, Megaphone , Lightbulb  } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -81,8 +81,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Comprehensive exhibition solutions designed to create exceptional business experiences and drive meaningful
-            connections.
+            Crafting Experiences, Delivering Success
           </motion.p>
         </div>
       </section>
@@ -98,10 +97,9 @@ export default function Services() {
             variants={fadeInUpVariants}
             custom={0}
           >
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Comprehensive Exhibition Solutions</h2>
+            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">360° Exhibition Solutions</h2>
             <p className="mb-16 text-lg text-gray-600">
-              At Maxpo, we offer a full range of services to create exceptional exhibition experiences that drive
-              business growth and foster meaningful connections.
+            At Maxpo, we design immersive exhibition experiences that captivate, connect, and drive business growth. From concept to execution, we bring your brand to life on the big stage
             </p>
           </motion.div>
 
@@ -116,74 +114,80 @@ export default function Services() {
             {[
               {
                 icon: <Globe className="h-6 w-6" />,
-                title: "Trade Show Management",
+                title: "Maxpo Exhibitions",
                 description:
-                  "End-to-end management of trade shows and exhibitions, from concept development to execution and post-event analysis.",
+                  "At Maxpo, we specialize in creating impactful exhibition experiences that captivate audiences, foster meaningful connections, and drive business growth. With our end-to-end solutions, we ensure your brand stands out in a competitive landscape.",
                 features: [
-                  "Venue selection and management",
-                  "Exhibitor and sponsor recruitment",
-                  "Floor plan design and optimization",
-                  "On-site logistics and coordination",
+                  "Custom Exhibition Stands",
+                  "Turnkey Solutions",
+                  "Brand Engagement Strategies",
+                  "Global Expertise",
+                  "Technology Integration",
                 ],
               },
               {
                 icon: <Users className="h-6 w-6" />,
-                title: "Conference Organization",
+                title: "Maxpo Conferences",
                 description:
-                  "Comprehensive conference planning and management services, creating engaging and informative events for industry professionals.",
+                  "At Maxpo, we craft world-class conference experiences that engage, inform, and leave a lasting impact. Whether it's a corporate summit, industry forum, or thought leadership event, we bring innovation and precision to every detail. ",
                 features: [
-                  "Program development and speaker management",
-                  "Registration and attendee management",
-                  "Audio-visual production",
-                  "Networking events and activities",
+                  "End-to-End Conference Management",
+                  "Seamless Event Production",
+                  "Engaging Speaker & Content Curation",
+                  "Audience Engagement Strategies",
+                  "Global Reach, Local Expertise",
                 ],
               },
               {
                 icon: <Calendar className="h-6 w-6" />,
-                title: "Corporate Events",
+                title: "Maxpo Special Events",
                 description:
-                  "Tailored corporate event solutions, from product launches and annual meetings to team-building activities and client appreciation events.",
+                  "At Maxpo, we bring creativity, precision, and innovation to special events, making every moment extraordinary. Whether it's a product launch, gala dinner, award ceremony, or corporate celebration, we ensure flawless execution and lasting impact.",
                 features: [
-                  "Event concept and theme development",
-                  "Venue selection and management",
-                  "Catering and entertainment coordination",
-                  "Branding and experiential design",
+                  "Bespoke Event Planning",
+                  "Seamless Execution",
+                  "Immersive Experiences",
+                  "Cutting-Edge Production",
+                  "Global Expertise",
                 ],
               },
-              // {
-              //   icon: <Lightbulb className="h-6 w-6" />,
-              //   title: "Exhibition Design & Build",
-              //   description:
-              //     "Creative and innovative exhibition stand design and construction services, creating impactful brand experiences.",
-              //   features: [
-              //     "Custom stand design and visualization",
-              //     "Modular and custom build solutions",
-              //     "Graphics production and installation",
-              //     "Furniture and equipment rental",
-              //   ],
-              // },
+              {
+                icon: <Lightbulb className="h-6 w-6" />,
+                title: "Maxpo Awards & Recognition",
+                description:
+                  "At Maxpo, we create prestigious award ceremonies that shine a spotlight on excellence, innovation, and success. From concept to execution, we ensure a seamless and memorable celebration that leaves a lasting impact. ",
+                features: [
+                  "End-to-End Award Ceremony Management",
+                  "Elegant Stage & Set Design ",
+                  "Seamless Nomination & Judging Process",
+                  "Engaging Entertainment & Guest Experience",
+                  "Global Standards, Local Expertise",
+                ],
+              },
               {
                 icon: <BarChart className="h-6 w-6" />,
-                title: "Digital & Hybrid Events",
+                title: "Maxpo Accreditations",
                 description:
-                  "Innovative digital and hybrid event solutions that combine the best of physical and virtual experiences.",
+                  "At Maxpo, we provide efficient and secure accreditation solutions to ensure smooth access management for exhibitions, conferences, and special events. Our expertise guarantees a hassle-free experience for organizers, exhibitors, and attendees alike. ",
                 features: [
-                  "Virtual exhibition platforms",
-                  "Live streaming and on-demand content",
-                  "Virtual networking and matchmaking",
-                  "Data analytics and reporting",
+                  "End-to-End Accreditation Management",
+                  "Seamless Access Control",
+                  "Customizable Solutions",
+                  "Real-Time Data & Analytics",
+                  "Global Standards Compliance",
                 ],
               },
               {
                 icon: <Megaphone className="h-6 w-6" />,
-                title: "Marketing & Promotion",
+                title: "Maxpo Trade Shows",
                 description:
-                  "Comprehensive marketing and promotional services to maximize event visibility, attendance, and engagement.",
+                  "At Maxpo, we specialize in organizing and managing world-class trade shows that connect businesses, showcase innovation, and drive industry growth. Our comprehensive solutions ensure seamless execution and maximum impact.",
                 features: [
-                  "Event branding and identity development",
-                  "Digital marketing campaigns",
-                  "Public relations and media outreach",
-                  "Social media management and content creation",
+                  "End-to-End Trade Show Management",
+                  "Exhibitor & Visitor Engagement ",
+                  "Seamless Logistics & Operations",
+                  "Innovative Technology Integration",
+                  "Global Expertise, Local Execution",
                 ],
               },
             ].map((service, index) => (
@@ -240,8 +244,7 @@ export default function Services() {
           >
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Our Process</h2>
             <p className="mb-16 text-lg text-gray-600">
-              We follow a structured approach to ensure every event we create delivers exceptional results and exceeds
-              expectations.
+            Our structured approach ensures every event is meticulously planned, flawlessly executed, and designed to deliver exceptional impact, engagement, and lasting success. 
             </p>
           </motion.div>
 
@@ -250,27 +253,27 @@ export default function Services() {
             {[
               {
                 number: "1",
-                title: "Discovery",
+                title: "Analyze",
                 description:
-                  "We begin by understanding your goals, target audience, and vision for the event, establishing clear objectives and success metrics.",
+                  "We study the market extensively and analyze trends and consumer behavior to identify exactly what your branding already has and what more it needs.",
               },
               {
                 number: "2",
-                title: "Planning",
+                title: "Design",
                 description:
-                  "Our team develops a comprehensive event plan, including venue selection, program development, marketing strategy, and budget management.",
+                  "Using the insights, we employ a strategic approach to achieve the aesthetic, functional, economic, and sociopolitical dimensions.",
               },
               {
                 number: "3",
-                title: "Execution",
+                title: "Execute",
                 description:
-                  "We manage all aspects of event execution, from logistics and setup to on-site management and troubleshooting, ensuring a flawless experience.",
+                  "We work systematically, outlining and achieving milestones with each step, from idea generation to implementation.",
               },
               {
                 number: "4",
-                title: "Evaluation",
+                title: "Evaluate",
                 description:
-                  "After the event, we conduct a thorough analysis of results, gathering feedback and data to measure success and identify opportunities for improvement.",
+                  "Carefully sifting through all our data, we provide you with actionable insights to enable you to react and assist in the identification of future change.",
               },
             ].map((step, index) => (
               <motion.div
@@ -312,11 +315,10 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-blue-950">
-              Ready to Create an Exceptional Event?
+            Ready to bring your vision to life?
             </h2>
             <p className="mb-8 text-lg text-black">
-              Let&apos;s work together to create an exhibition experience that drives business growth and fosters
-              meaningful connections.
+              Reach out and let&apos;s create something exceptional together!
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
