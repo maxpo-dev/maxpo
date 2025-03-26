@@ -233,73 +233,127 @@ export default function Services() {
       </section>
 
       {/* Process Section with animated steps */}
-      <section className="bg-gray-50 py-24" ref={processStepRef}>
+      <section className="bg-white py-24" ref={processStepRef}>
         <div className="container mx-auto px-4">
-          <motion.div
-            className="mx-auto max-w-3xl text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Our Process</h2>
-            <p className="mb-16 text-lg text-gray-600">
-            Our structured approach ensures every event is meticulously planned, flawlessly executed, and designed to deliver exceptional impact, engagement, and lasting success. 
-            </p>
-          </motion.div>
+          <div className="flex mb-16">
+            <div className="flex flex-col gap-2 mr-6">
+              {/* {[...Array(6)].map((_, i) => (
+                <div key={i} className="flex gap-2">
+                  <div className="w-2 h-2 bg-black rounded-full"></div>
+                  <div className="w-2 h-2 bg-black rounded-full"></div>
+                </div>
+              ))} */}
+            </div>
+            <motion.h2
+              className="text-5xl font-bold"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              Our Process
+            </motion.h2>
+          </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Process Steps with sequential animation */}
-            {[
-              {
-                number: "1",
-                title: "Analyze",
-                description:
-                  "We study the market extensively and analyze trends and consumer behavior to identify exactly what your branding already has and what more it needs.",
-              },
-              {
-                number: "2",
-                title: "Design",
-                description:
-                  "Using the insights, we employ a strategic approach to achieve the aesthetic, functional, economic, and sociopolitical dimensions.",
-              },
-              {
-                number: "3",
-                title: "Execute",
-                description:
-                  "We work systematically, outlining and achieving milestones with each step, from idea generation to implementation.",
-              },
-              {
-                number: "4",
-                title: "Evaluate",
-                description:
-                  "Carefully sifting through all our data, we provide you with actionable insights to enable you to react and assist in the identification of future change.",
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                className="relative rounded-xl bg-white p-8 shadow-md"
-                initial={{ opacity: 0, y: 30 }}
-                animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Step 1 - Analyze */}
+            <div className="">
+              <div className="relative w-64 h-64">
+                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
+                <div
+                  className="w-full h-full rounded-full border-[6px] border-white absolute"
+                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
+                ></div>
+                 
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <motion.div
-                  className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-950 text-white"
-                  initial={{ scale: 0 }}
-                  animate={isProcessInView ? { scale: 1 } : { scale: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20,
-                    delay: 0.3 + index * 0.2,
-                  }}
-                >
-                  <span className="text-lg font-bold">{step.number}</span>
-                </motion.div>
-                <h3 className="mb-4 mt-6 text-xl font-semibold">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-              </motion.div>
-            ))}
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 0 * 0.2 }}
+            > <span className="text-9xl font-light text-blue-950 leading-none">1</span></motion.div>
+                   <p className="text-blue-950 text-2xl mt-2">Analyze</p>
+                </div>
+
+              </div>
+
+              <p className="text-gray-700 text-center mt-8 px-4">
+                We study the market extensively and analyze trends and consumer behavior to identify exactly what your
+                branding already has and what more it needs.
+              </p>
+              </div>
+
+            {/* Step 2 - Design */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 1 * 0.2 }}
+            >
+              <div className="relative w-64 h-64">
+                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
+                <div
+                  className="w-full h-full rounded-full border-[6px] border-white absolute"
+                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
+                ></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                  <span className="text-9xl font-light text-blue-950 leading-none">2</span>
+                  <p className="text-black text-2xl mt-2">Design</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-center mt-8 px-4">
+                Using the insights, we employ a strategic approach to achieve the aesthetic, functional, economic, and
+                sociopolitical dimensions.
+              </p>
+            </motion.div>
+
+            {/* Step 3 - Execute */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 2 * 0.2 }}
+            >
+              <div className="relative w-64 h-64">
+                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
+                <div
+                  className="w-full h-full rounded-full border-[6px] border-white absolute"
+                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
+                ></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                  <span className="text-9xl font-light text-blue-950 leading-none">3</span>
+                  <p className="text-black text-2xl mt-2">Execute</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-center mt-8 px-4">
+                We work systematically, outlining and achieving milestones with each step, from idea generation to
+                implementation.
+              </p>
+            </motion.div>
+
+            {/* Step 4 - Evaluate */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 3 * 0.2 }}
+            >
+              <div className="relative w-64 h-64">
+                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
+                <div
+                  className="w-full h-full rounded-full border-[6px] border-white absolute"
+                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
+                ></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                  <span className="text-9xl font-light text-blue-950 leading-none">4</span>
+                  <p className="text-black text-2xl mt-2">Evaluate</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-center mt-8 px-4">
+                Carefully sifting through all our data, we provide you with actionable insights to enable you to reflect
+                and assist in the identification of future change.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -321,12 +375,17 @@ export default function Services() {
               Reach out and let&apos;s create something exceptional together!
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-300">
-                  Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+             <Link href="/contact">
+             <Button
+              size="lg"
+              className="rounded-full bg-white px-8 text-black hover:bg-gray-300"
+            >
+               Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+             </Link>
+           </motion.div>
+              {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
                   variant="outline"
@@ -334,7 +393,7 @@ export default function Services() {
                 >
                   View Our Portfolio
                 </Button>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
