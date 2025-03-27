@@ -158,7 +158,7 @@ export default function UpcomingEvents() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section with Parallax Effect */}
-      <motion.section className="relative h-[80vh] flex items-center justify-center" style={{ opacity, scale }}>
+      <motion.section className="relative h-[80vh] flex items-center justify-center mb-12 md:mb-20 lg:mb-24" style={{ opacity, scale }}>
         {/* Background Image with Parallax */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -205,7 +205,8 @@ export default function UpcomingEvents() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Discover our upcoming exhibitions and conferences around the world.
+           Unlock exclusive exhibitions and conferences worldwide—where the future of your industry takes shape!
+
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -226,6 +227,53 @@ export default function UpcomingEvents() {
           </motion.div>
         </div>
       </motion.section>
+      
+      {/* Explore Events card  */}
+      <motion.section
+      className="bg-gray-100 p-8 md:p-12 rounded-2xl max-w-5xl mx-auto shadow-md text-center mb-10"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <motion.h3
+        className="text-2xl md:text-3xl font-bold mb-4"
+        animate={{
+          textShadow: [
+            "0 0 0px rgba(0,0,0,0)",
+            "0 0 10px rgba(0,0,0,0.1)",
+            "0 0 0px rgba(0,0,0,0)",
+          ],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Number.POSITIVE_INFINITY,
+          repeatType: "reverse",
+        }}
+      >
+        Explore Events
+      </motion.h3>
+      <motion.p
+        className="text-gray-600 text-base md:text-lg leading-relaxed mb-3"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Step into a world of innovation, networking, and opportunity. Discover our globally curated exhibitions and
+        conferences designed to connect industry leaders, showcase cutting-edge trends, and create unforgettable
+        experiences. Stay ahead—explore what’s next!
+      </motion.p>
+      <motion.p
+        className="text-gray-600 text-base md:text-lg leading-relaxed"
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        Stay updated with the latest events, industry trends, and exclusive opportunities—don’t miss a moment!
+      </motion.p>
+    </motion.section>
+
+
 
       {/* Events Filter with Animation */}
       <motion.section

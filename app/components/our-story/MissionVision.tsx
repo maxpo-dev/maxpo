@@ -51,7 +51,9 @@ export default function MissionVision() {
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Our mission is to spark innovation, cultivate meaningful connections, and open new doors...
+              Our mission is to spark innovation, cultivate meaningful connections, and open
+new doors for businesses worldwide. Every event we create is designed to empower industries, drive collaboration, and shape the future of global commerce.
+
             </motion.p>
           </motion.div>
           
@@ -81,7 +83,10 @@ export default function MissionVision() {
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Our vision is to transform trade shows into catalysts for industry evolution...
+              Our vision is to transform trade shows into catalysts for industry evolution,
+making them more than just networking spaces but powerful engines for
+innovation and global impact.
+
             </motion.p>
           </motion.div>
         </div>
