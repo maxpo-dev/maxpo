@@ -5,7 +5,7 @@ import type React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
-import { ArrowDown, ArrowRight, Calendar, MapPin } from "lucide-react"
+import { ArrowDown, ArrowRight, Calendar, Check, MapPin } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
@@ -78,6 +78,10 @@ export default function UpcomingEvents() {
   const [expandedDescriptions, setExpandedDescriptions] = useState<number[]>([])
   // const sortOption = "Date: Nearest first"
   const [, setIsLoaded] = useState(false)
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState("")
+  const [isSuccess, setIsSuccess] = useState(false)
 
   // Animation scroll effects
   const { scrollYProgress } = useScroll()
@@ -106,6 +110,48 @@ export default function UpcomingEvents() {
       prev.includes(eventId) ? prev.filter((id) => id !== eventId) : [...prev, eventId],
     )
   }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setMessage("")
+
+    try {
+      const formData = new FormData()
+      formData.append("email", email)
+
+      const response = await fetch("/api/action", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setIsSuccess(true)
+        setMessage(data.message)
+        setEmail("")
+      } else {
+        setMessage(data.message || "Something went wrong")
+      }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      setMessage("Network error. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  
+  useEffect(() => {
+    let timer: NodeJS.Timeout
+    if (isSuccess) {
+      timer = setTimeout(() => {
+        setIsSuccess(false)
+        setMessage("")
+      }, 7000) // 7 seconds delay before showing form again
+    }
+    return () => clearTimeout(timer)
+  }, [isSuccess])
+
 
   // Set loaded state after component mounts
   useEffect(() => {
@@ -568,28 +614,92 @@ export default function UpcomingEvents() {
               Subscribe to our newsletter to receive updates on upcoming events, early bird discounts, and industry
               insights.
             </p>
-            <motion.div
-              className="flex flex-col gap-4 sm:flex-row"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <motion.input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 rounded-full border-none bg-black/10 px-6 py-3 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
-                whileFocus={{ scale: 1.02, boxShadow: "0 0 0 2px rgba(255,255,255,0.3)" }}
-                transition={{ duration: 0.2 }}
-              />
+            <div className="w-full max-w-lg mx-auto min-h-[150px]">
+      <AnimatePresence mode="wait">
+        {!isSuccess ? (
+          <motion.form
+            key="form"
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.div className="flex-1" whileFocus={{ scale: 1.02 }}>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full rounded-full border-none bg-black/10 px-6 py-3 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+                />
+              </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Button className="rounded-full bg-white px-8 text-black hover:bg-gray-200">Subscribe</Button>
+                <Button 
+                  type="submit" 
+                  className="w-full sm:w-auto rounded-full bg-white px-8 text-black hover:bg-gray-200"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                  {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
+                </Button>
               </motion.div>
+            </div>
+            
+            {message && (
+              <motion.div 
+                className="text-center text-red-500 w-full"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {message}
+              </motion.div>
+            )}
+          </motion.form>
+        ) : (
+          <motion.div
+            key="success-message"
+            className="flex flex-col items-center justify-center gap-4 p-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.4 }}
+          >
+            <motion.div
+              className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, type: "spring" }}
+            >
+              <Check className="w-8 h-8 text-green-600" />
             </motion.div>
+            <motion.h3 
+              className="text-xl font-semibold text-center text-green-600"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              {message}
+            </motion.h3>
+            <motion.p
+              className="text-gray-600 text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              The form will reappear shortly...
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
           </motion.div>
         </div>
       </motion.section>

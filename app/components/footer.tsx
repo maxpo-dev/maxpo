@@ -1,11 +1,57 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin, Mail,  MapPin } from "lucide-react"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Loader2, CheckCircle } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+
+
+  async function handleSubscribe(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault() // Prevent default form submission behavior
+    setIsSubmitting(true)
+    setSubscriptionStatus(null)
+  
+    // Create FormData from the form
+    const formData = new FormData(event.currentTarget)
+  
+    try {
+      const response = await fetch("/api/action", {
+        method: "POST",
+        body: formData,
+      })
+  
+      const result = await response.json()
+      setSubscriptionStatus(result)
+  
+      if (result.success) {
+        setEmail("")
+        setTimeout(() => {
+          setSubscriptionStatus(null)
+        }, 5000)
+      }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      setSubscriptionStatus({
+        success: false,
+        message: "Something went wrong. Please try again later.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  
+  
   return (
     <footer className="bg-blue-950 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -26,19 +72,31 @@ export default function Footer() {
               experiences.
             </p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/maxpoexhibitions" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link
+                href="https://www.facebook.com/maxpoexhibitions"
+                className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700"
+              >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://x.com/maxpoae" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link
+                href="https://x.com/maxpoae"
+                className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700"
+              >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://www.instagram.com/maxpoexhibitions/" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link
+                href="https://www.instagram.com/maxpoexhibitions/"
+                className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700"
+              >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://www.linkedin.com/company/maxpoexhibitions/" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700">
+              <Link
+                href="https://www.linkedin.com/company/maxpoexhibitions/"
+                className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-gray-700"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -73,11 +131,6 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/blog" className="text-gray-400 transition-colors hover:text-white">
-                  Blog
-                </Link>
-              </li> */}
             </ul>
           </div>
 
@@ -102,14 +155,39 @@ export default function Footer() {
           <div>
             <h3 className="mb-6 text-lg font-semibold">Subscribe</h3>
             <p className="mb-4 text-gray-400">Stay updated with our latest events and news.</p>
-            <div className="flex flex-col gap-3">
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
               <Input
                 type="email"
+                name="email"
                 placeholder="Your email address"
                 className="border-gray-700 bg-gray-800 text-white placeholder:text-gray-500"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
-              <Button className="w-full bg-white text-black hover:bg-gray-200">Subscribe</Button>
-            </div>
+              <Button type="submit" className="w-full bg-white text-black hover:bg-gray-200" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  "Subscribe"
+                )}
+              </Button>
+
+              {/* Subscription status message */}
+              {subscriptionStatus && (
+                <div
+                  className={`mt-2 flex items-center gap-2 rounded-md p-2 text-sm ${
+                    subscriptionStatus.success ? "bg-green-900/30 text-green-300" : "bg-red-900/30 text-red-300"
+                  }`}
+                >
+                  {subscriptionStatus.success ? <CheckCircle className="h-4 w-4" /> : null}
+                  <p>{subscriptionStatus.message}</p>
+                </div>
+              )}
+            </form>
           </div>
         </div>
 
@@ -126,6 +204,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

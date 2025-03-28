@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Globe, Users, Calendar, BarChart, Megaphone, Lightbulb } from "lucide-react"
+import { ArrowRight, CheckCircle,  Landmark, Theater, Ribbon, Trophy, IdCard, ChartCandlestick } from "lucide-react"
 import { motion, useInView, useAnimation } from "framer-motion"
 import { useRef, useEffect } from "react"
 
@@ -123,7 +123,7 @@ export default function Services() {
             {/* Service Cards */}
             {[
               {
-                icon: <Globe className="h-6 w-6" />,
+                icon:  <Landmark className="h-6 w-6"/>,
                 title: "Maxpo Exhibitions",
                 description:
                   "At Maxpo, we specialize in creating impactful exhibition experiences that captivate audiences, foster meaningful connections, and drive business growth. With our end-to-end solutions, we ensure your brand stands out in a competitive landscape.",
@@ -136,7 +136,7 @@ export default function Services() {
                 ],
               },
               {
-                icon: <Users className="h-6 w-6" />,
+                icon: <Theater className="h-6 w-6"/>,
                 title: "Maxpo Conferences",
                 description:
                   "At Maxpo, we craft world-class conference experiences that engage, inform, and leave a lasting impact. Whether it's a corporate summit, industry forum, or thought leadership event, we bring innovation and precision to every detail. ",
@@ -149,7 +149,7 @@ export default function Services() {
                 ],
               },
               {
-                icon: <Calendar className="h-6 w-6" />,
+                icon: <Ribbon className="h-6 w-6"/>,
                 title: "Maxpo Special Events",
                 description:
                   "At Maxpo, we bring creativity, precision, and innovation to special events, making every moment extraordinary. Whether it's a product launch, gala dinner, award ceremony, or corporate celebration, we ensure flawless execution and lasting impact.",
@@ -162,7 +162,7 @@ export default function Services() {
                 ],
               },
               {
-                icon: <Lightbulb className="h-6 w-6" />,
+                icon: <Trophy className="h-6 w-6"/>,
                 title: "Maxpo Awards & Recognition",
                 description:
                   "At Maxpo, we create prestigious award ceremonies that shine a spotlight on excellence, innovation, and success. From concept to execution, we ensure a seamless and memorable celebration that leaves a lasting impact. ",
@@ -175,7 +175,7 @@ export default function Services() {
                 ],
               },
               {
-                icon: <BarChart className="h-6 w-6" />,
+                icon: <IdCard className="h-6 w-6"/>,
                 title: "Maxpo Accreditations",
                 description:
                   "At Maxpo, we provide efficient and secure accreditation solutions to ensure smooth access management for exhibitions, conferences, and special events. Our expertise guarantees a hassle-free experience for organizers, exhibitors, and attendees alike. ",
@@ -188,7 +188,7 @@ export default function Services() {
                 ],
               },
               {
-                icon: <Megaphone className="h-6 w-6" />,
+                icon: <ChartCandlestick className="h-6 w-6"/>,
                 title: "Maxpo Trade Shows",
                 description:
                   "At Maxpo, we specialize in organizing and managing world-class trade shows that connect businesses, showcase innovation, and drive industry growth. Our comprehensive solutions ensure seamless execution and maximum impact.",
