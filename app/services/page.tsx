@@ -2,12 +2,21 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Globe, Users, Calendar,  BarChart, Megaphone , Lightbulb  } from "lucide-react"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { ArrowRight, CheckCircle, Globe, Users, Calendar, BarChart, Megaphone, Lightbulb } from "lucide-react"
+import { motion, useInView, useAnimation } from "framer-motion"
+import { useRef, useEffect } from "react"
 
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+
+// Add this interface for ProcessCard props at the top of the file, before the Services component
+interface ProcessCardProps {
+  step: number
+  title: string
+  description: string
+  isInView: boolean
+  delay: number
+}
 
 export default function Services() {
   // Animation variants
@@ -99,7 +108,8 @@ export default function Services() {
           >
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">360° Exhibition Solutions</h2>
             <p className="mb-16 text-lg text-gray-600">
-            At Maxpo, we design immersive exhibition experiences that captivate, connect, and drive business growth. From concept to execution, we bring your brand to life on the big stage
+              At Maxpo, we design immersive exhibition experiences that captivate, connect, and drive business growth.
+              From concept to execution, we bring your brand to life on the big stage
             </p>
           </motion.div>
 
@@ -232,18 +242,11 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Process Section with animated steps */}
+      {/* Process Section with animated circular progress bars */}
       <section className="bg-white py-24" ref={processStepRef}>
         <div className="container mx-auto px-4">
-          <div className="flex mb-16">
-            <div className="flex flex-col gap-2 mr-6">
-              {/* {[...Array(6)].map((_, i) => (
-                <div key={i} className="flex gap-2">
-                  <div className="w-2 h-2 bg-black rounded-full"></div>
-                  <div className="w-2 h-2 bg-black rounded-full"></div>
-                </div>
-              ))} */}
-            </div>
+          <div className="flex mb-16 justify-center">
+            <div className="flex flex-col gap-2 mr-6">{/* Dots removed as per original */}</div>
             <motion.h2
               className="text-5xl font-bold"
               initial={{ opacity: 0, y: 20 }}
@@ -256,104 +259,46 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Step 1 - Analyze */}
-            <div className="">
-              <div className="relative w-64 h-64">
-                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
-                <div
-                  className="w-full h-full rounded-full border-[6px] border-white absolute"
-                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
-                ></div>
-                 
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.5, delay: 0 * 0.2 }}
-            > <span className="text-9xl font-light text-blue-950 leading-none">1</span></motion.div>
-                   <p className="text-blue-950 text-2xl mt-2">Analyze</p>
-                </div>
-
-              </div>
-
-              <p className="text-gray-700 text-center mt-8 px-4">
-                We study the market extensively and analyze trends and consumer behavior to identify exactly what your
-                branding already has and what more it needs.
-              </p>
-              </div>
-
-            {/* Step 2 - Design */}
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.5, delay: 1 * 0.2 }}
-            >
-              <div className="relative w-64 h-64">
-                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
-                <div
-                  className="w-full h-full rounded-full border-[6px] border-white absolute"
-                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
-                ></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                  <span className="text-9xl font-light text-blue-950 leading-none">2</span>
-                  <p className="text-black text-2xl mt-2">Design</p>
-                </div>
-              </div>
-              <p className="text-gray-700 text-center mt-8 px-4">
-                Using the insights, we employ a strategic approach to achieve the aesthetic, functional, economic, and
-                sociopolitical dimensions.
-              </p>
-            </motion.div>
-
-            {/* Step 3 - Execute */}
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.5, delay: 2 * 0.2 }}
-            >
-              <div className="relative w-64 h-64">
-                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
-                <div
-                  className="w-full h-full rounded-full border-[6px] border-white absolute"
-                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
-                ></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                  <span className="text-9xl font-light text-blue-950 leading-none">3</span>
-                  <p className="text-black text-2xl mt-2">Execute</p>
-                </div>
-              </div>
-              <p className="text-gray-700 text-center mt-8 px-4">
-                We work systematically, outlining and achieving milestones with each step, from idea generation to
-                implementation.
-              </p>
-            </motion.div>
-
-            {/* Step 4 - Evaluate */}
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.5, delay: 3 * 0.2 }}
-            >
-              <div className="relative w-64 h-64">
-                <div className="w-full h-full rounded-full border-[6px] border-blue-950 absolute"></div>
-                <div
-                  className="w-full h-full rounded-full border-[6px] border-white absolute"
-                  style={{ clipPath: "polygon(0 0, 25% 0, 25% 100%, 0 100%)" }}
-                ></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                  <span className="text-9xl font-light text-blue-950 leading-none">4</span>
-                  <p className="text-black text-2xl mt-2">Evaluate</p>
-                </div>
-              </div>
-              <p className="text-gray-700 text-center mt-8 px-4">
-                Carefully sifting through all our data, we provide you with actionable insights to enable you to reflect
-                and assist in the identification of future change.
-              </p>
-            </motion.div>
+            {/* Process Steps with Circular Progress Bars */}
+            {[
+              {
+                step: 1,
+                title: "Analyze",
+                // percentage: 25,
+                description:
+                  "We study the market extensively and analyze trends and consumer behavior to identify exactly what your branding already has and what more it needs.",
+              },
+              {
+                step: 2,
+                title: "Design",
+                // percentage: 50,
+                description:
+                  "Using the insights, we employ a strategic approach to achieve the aesthetic, functional, economic, and sociopolitical dimensions.",
+              },
+              {
+                step: 3,
+                title: "Execute",
+                // percentage: 75,
+                description:
+                  "We work systematically, outlining and achieving milestones with each step, from idea generation to implementation.",
+              },
+              {
+                step: 4,
+                title: "Evaluate",
+                // percentage: 100,
+                description:
+                  "Carefully sifting through all our data, we provide you with actionable insights to enable you to reflect and assist in the identification of future change.",
+              },
+            ].map((process, index) => (
+              <ProcessCard
+                key={index}
+                step={process.step}
+                title={process.title}
+                // percentage={process.percentage}
+                description={process.description}
+                isInView={isProcessInView}
+                delay={index * 0.2}/>
+            ))}
           </div>
         </div>
       </section>
@@ -369,22 +314,17 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-blue-950">
-            Ready to bring your vision to life?
+              Ready to bring your vision to life?
             </h2>
-            <p className="mb-8 text-lg text-black">
-              Reach out and let&apos;s create something exceptional together!
-            </p>
+            <p className="mb-8 text-lg text-black">Reach out and let&apos;s create something exceptional together!</p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-             <Link href="/contact">
-             <Button
-              size="lg"
-              className="rounded-full bg-white px-8 text-black hover:bg-gray-300"
-            >
-               Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-             </Link>
-           </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link href="/contact">
+                  <Button size="lg" className="rounded-full bg-blue-950 px-8 text-white hover:bg-blue-900">
+                    Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </motion.div>
               {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
@@ -399,6 +339,90 @@ export default function Services() {
         </div>
       </section>
     </div>
+  )
+}
+
+// Replace the ProcessCard function with this properly typed version
+function ProcessCard({ step, title, description, isInView, delay }: ProcessCardProps) {
+  const controls = useAnimation()
+  const radius = 120 // Circle radius
+  const circumference = 2 * Math.PI * radius
+  // Fixed percentage based on step (25%, 50%, 75%, 100%)
+  const percentage = step * 25
+  const strokeDashoffset = circumference - (percentage / 100) * circumference
+
+  useEffect(() => {
+    if (isInView) {
+      // Animate the circle
+      controls.start({
+        strokeDashoffset,
+        transition: { duration: 1.5, ease: "easeInOut" },
+      })
+    }
+  }, [isInView, strokeDashoffset, controls])
+
+  return (
+    <motion.div
+      className="flex flex-col items-center"
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5, delay }}
+    >
+      <Card className="w-full max-w-xs shadow-lg hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col">
+        <CardContent className="p-6 flex flex-col items-center justify-between h-full">
+          <div className="relative w-64 h-64 flex items-center justify-center mb-4">
+            {/* Background circle */}
+            <svg width="260" height="260" viewBox="0 0 260 260" className="absolute">
+              <circle cx="130" cy="130" r={radius} fill="none" stroke="#E5E7EB" strokeWidth="8" />
+            </svg>
+
+            {/* Progress circle */}
+            <svg
+              width="260"
+              height="260"
+              viewBox="0 0 260 260"
+              className="absolute"
+              style={{ transform: "rotate(-90deg)" }}
+            >
+              <motion.circle
+                cx="130"
+                cy="130"
+                r={radius}
+                fill="none"
+                stroke="#172554" // blue-950
+                strokeWidth="8"
+                strokeDasharray={circumference}
+                initial={{ strokeDashoffset: circumference }}
+                animate={controls}
+                strokeLinecap="round"
+              />
+            </svg>
+
+            {/* Content in the center */}
+            <div className="z-10 text-center">
+              <motion.span
+                className="text-7xl font-light text-blue-950 leading-none block"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.5, delay: delay + 0.3 }}
+              >
+                {step}
+              </motion.span>
+              <motion.p
+                className="text-blue-950 text-2xl mt-2 font-medium"
+                initial={{ y: 10, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
+                transition={{ duration: 0.5, delay: delay + 0.5 }}
+              >
+                {title}
+              </motion.p>
+            </div>
+          </div>
+
+          <p className="text-gray-700 text-center mt-4">{description}</p>
+        </CardContent>
+      </Card>
+    </motion.div>
   )
 }
 
