@@ -30,9 +30,9 @@ export default function UpcomingEvents() {
     {
       id: 1,
       title: "GMEC India 2025",
-      date: "April 25-27, 2025",
+      date: "June 20-22, 2025",
       location: "Palace Ground, Bengaluru",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.22 PM (1).jpeg",
+      image: "/images/events/gmec.jpeg",
       description:
         "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
       category: "Exhibition",

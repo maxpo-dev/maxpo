@@ -1,7 +1,7 @@
 "use client"
 
+import { useState } from "react"
 import type React from "react"
-
 import Image from "next/image"
 import { ArrowRight, CheckCircle, Briefcase, MapPin, Clock, DollarSign } from "lucide-react"
 import { motion } from "framer-motion"
@@ -10,6 +10,7 @@ import { useInView } from "react-intersection-observer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { JobApplicationForm } from "@/app/components/job-application-form"
 
 // Animation variants
 const fadeIn = {
@@ -66,26 +67,55 @@ const AnimatedCard = ({ children, delay = 0 }: AnimatedCardProps) => {
 }
 
 export default function Careers() {
+  const [applicationForm, setApplicationForm] = useState({
+    isOpen: false,
+    jobTitle: "",
+    jobLocation: "",
+  })
+
+  const openApplicationForm = (jobTitle: string, jobLocation: string) => {
+    setApplicationForm({
+      isOpen: true,
+      jobTitle,
+      jobLocation,
+    })
+  }
+
+  const closeApplicationForm = () => {
+    setApplicationForm({
+      ...applicationForm,
+      isOpen: false,
+    })
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Application Form Modal */}
+      <JobApplicationForm
+        isOpen={applicationForm.isOpen}
+        onClose={closeApplicationForm}
+        jobTitle={applicationForm.jobTitle}
+        jobLocation={applicationForm.jobLocation}
+      />
+
       {/* Hero Section */}
       <motion.section className="relative h-[80vh] pt-20">
-      <div className="absolute inset-0 z-0 overflow-hidden">
-  <motion.div
-    initial={{ scale: 1.1 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}
-    className="absolute inset-0 h-full w-full"
-  >
-    <Image
-      src="/images/careers/WhatsApp Image 2025-03-21 at 2.33.02 PM.jpeg"
-      alt="Careers at Maxpo"
-      fill
-      priority
-    />
-    <div className="absolute inset-0 bg-black/60" />
-  </motion.div>
-</div>
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute inset-0 h-full w-full"
+          >
+            <Image
+              src="/images/careers/WhatsApp Image 2025-03-21 at 2.33.02 PM.jpeg"
+              alt="Careers at Maxpo"
+              fill
+              priority
+            />
+            <div className="absolute inset-0 bg-black/60" />
+          </motion.div>
+        </div>
 
         <motion.div
           className="container relative z-10 mx-auto px-4 py-32 text-white md:py-40"
@@ -309,7 +339,7 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section className="bg-white py-24">
+      <section id="open-positions" className="bg-white py-24">
         <div className="container mx-auto px-4">
           <motion.div
             className="mx-auto max-w-3xl text-center"
@@ -377,7 +407,10 @@ export default function Careers() {
                     </div>
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800">
+                    <Button
+                      className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800"
+                      onClick={() => openApplicationForm("Event Manager", "Dubai, UAE")}
+                    >
                       Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>
@@ -430,7 +463,10 @@ export default function Careers() {
                     </div>
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800">
+                    <Button
+                      className="rounded-full bg-blue-950 px-6 text-white hover:bg-gray-800"
+                      onClick={() => openApplicationForm("Marketing Specialist", "Dubai, UAE")}
+                    >
                       Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>
@@ -487,7 +523,10 @@ export default function Careers() {
                     </div>
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="rounded-full bg-black px-6 text-white hover:bg-gray-800">
+                    <Button
+                      className="rounded-full bg-black px-6 text-white hover:bg-gray-800"
+                      onClick={() => openApplicationForm("Exhibition Designer", "Mumbai, India")}
+                    >
                       Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>
@@ -542,7 +581,10 @@ export default function Careers() {
                     </div>
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="rounded-full bg-black px-6 text-white hover:bg-gray-800">
+                    <Button
+                      className="rounded-full bg-black px-6 text-white hover:bg-gray-800"
+                      onClick={() => openApplicationForm("Business Development Manager", "Mumbai, India")}
+                    >
                       Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>
@@ -563,7 +605,11 @@ export default function Careers() {
               join our team.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800">
+              <Button
+                size="lg"
+                className="rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800"
+                onClick={() => openApplicationForm("General Application", "Any Location")}
+              >
                 Submit Your Resume <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </motion.div>
@@ -630,15 +676,19 @@ export default function Careers() {
               </div>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="mt-4 rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800">
+                <Button
+                  size="lg"
+                  className="mt-4 rounded-full bg-blue-950 px-8 text-white hover:bg-gray-800"
+                  onClick={() => openApplicationForm("Internship", "Dubai/Mumbai")}
+                >
                   Apply for Internship <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </motion.div>
             </motion.div>
           </motion.div>
         </div>
-
       </section>
+
       {/* CTA Section */}
       <section className="bg-gray-100 py-24 text-blue-950">
         <div className="container mx-auto px-4">
@@ -659,7 +709,11 @@ export default function Careers() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <Button size="lg" className="rounded-full bg-white px-8 text-black hover:bg-gray-200 cursor-pointer">
+                <Button
+                  size="lg"
+                  className="rounded-full bg-white px-8 text-black hover:bg-gray-200 cursor-pointer"
+                  onClick={() => document.getElementById("open-positions")?.scrollIntoView({ behavior: "smooth" })}
+                >
                   View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </motion.div>
@@ -672,6 +726,7 @@ export default function Careers() {
                   size="lg"
                   variant="outline"
                   className="rounded-full border-white px-8 text-black hover:bg-white hover:text-black cursor-pointer"
+                  onClick={() => openApplicationForm("General Application", "Any Location")}
                 >
                   Submit Your Resume
                 </Button>
@@ -681,6 +736,6 @@ export default function Careers() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
