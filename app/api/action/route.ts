@@ -36,8 +36,8 @@ export async function POST(req: Request) {
 
     // Email content
     const mailOptions = {
-      from: "chvamshi03@gmail.com",
-      to: "chvamshi03@gmail.com",
+      from: "Maxpo Mail Submission<chvamshi03@gmail.com>",
+      to: "anu.maxpo@gmail.com, digital.maxpo@gmail.com",
       subject: "New subscription for Maxpo",
       html: `
         <h1>New Newsletter Subscription</h1>

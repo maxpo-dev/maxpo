@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     // Email content
     const mailOptions = {
         from: "Maxpo<chvamshi03@gmail.com>",
-      to: "digital.maxpo@gmail.com, vamshi.maxpo@gmail.com",
+      to: "digital.maxpo@gmail.com, anu.maxpo@gmail.com",
       subject: "New Enquiry from DIGITECH Contact Form",
       html: `
         <h1>New Enquiry</h1>
