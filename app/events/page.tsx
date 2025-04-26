@@ -416,7 +416,7 @@ export default function UpcomingEvents() {
                           src={event.image || "/placeholder.svg"}
                           alt={event.title}
                           fill
-                          className="object-cover"
+                          className=""
                         />
                       </motion.div>
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
