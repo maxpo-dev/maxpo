@@ -1,9 +1,12 @@
+// app/layout.tsx (or wherever your RootLayout is)
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Script from "next/script";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,12 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* Google Analytics */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Google Analytics Scripts */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-P96HYHF5F5"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-P96HYHF5F5`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -46,6 +47,7 @@ export default function RootLayout({
         </Script>
 
         <Navbar />
+        <GoogleAnalytics /> {/* Automatically tracks route changes */}
         {children}
         <Footer />
       </body>
