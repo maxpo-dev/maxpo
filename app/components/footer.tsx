@@ -144,15 +144,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 text-gray-400" />
-                <span className="text-gray-400">Dubai, UAE (Headquarters)</span>
+                <span className="text-gray-400">Dubai, UAE </span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="mt-1 h-5 w-5 text-gray-400" />
-                <span className="text-gray-400">India Office</span>
-              </li>
+  <MapPin className="mt-1 h-10 w-10 text-gray-400" />
+  <span className="text-gray-400">
+    India Office : No.50, Pulikeshi Nagar, 2nd Floor, Frazer Town, MM Road, Bengaluru - 05
+  </span>
+</li>
+
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400">info@maxpo.com</span>
+                <span className="text-gray-400">info@maxpo.ae</span>
               </li>
             </ul>
           </div>
@@ -199,7 +202,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Maxpo Exhibitions. All rights reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-white">
+            <Link href="/privacy" className="hover:text-white">
               Privacy Policy
             </Link>
             <Link href="/terms-of-service" className="hover:text-white">
