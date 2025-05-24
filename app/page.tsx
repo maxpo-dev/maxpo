@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
 import { Typewriter } from "react-simple-typewriter"
+
 // import { useState } from "react"
 // import Footer from "@/app/components/footer"
 
@@ -25,16 +26,16 @@ export default function Home() {
       category: "Exhibition",
       website: "https://gmecexhibitions.in/",
     },
-    {
-      id: 2,
-      title: "Gulf News presents India Property Show",
-      date: "17-18 May 2025",
-      location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
-      description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
-      category: "Exhibition",
-      website: "",
-    },
+    // {
+    //   id: 2,
+    //   title: "Gulf News presents India Property Show",
+    //   date: "17-18 May 2025",
+    //   location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
+    //   description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
+    //   category: "Exhibition",
+    //   website: "",
+    // },
     {
       id: 3,
       title: "Future Digitech Summit & Awards 2025",
@@ -239,6 +240,11 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+
+  
+
+    
 
       {/* Our Essence */}
       <section className="bg-blue-950 py-24 text-white">
