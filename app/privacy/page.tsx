@@ -89,7 +89,7 @@ const PrivacyPolicy: React.FC = () => {
               <h3 className="text-xl font-semibold mt-6 mb-2">9. Contact Us</h3>
               <p>If you have questions, contact us at:</p>
               <p><strong>Email:</strong> <a className="text-blue-600 underline" href="mailto:info@maxpo.com">info@maxpo.com</a></p>
-              {/* <p><strong>Phone:</strong> +91 97417 44869</p> */}
+              {/* <p><strong>Phone:</strong> +91 97417 44869</p>    */}
               <p><strong>Address:</strong> 50 2nd floor, MM Road, Frazer Town, Bengaluru, Karnataka India 560005</p>
             </section>
           </CardContent>
