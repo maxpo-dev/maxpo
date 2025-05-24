@@ -46,6 +46,17 @@ export default function Home() {
       category: "Conference and Awards",
       website:"https://www.futureproptechsummit.com/",
     },
+        {
+      id: 4,
+      title: "Future Proptech Summit",
+      date: "14-15 October 2025",
+      location: "Le Méridien Hotel, Airport Road, Dubai",
+      description:
+        "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. ",
+      category: "Conferences",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 6.14.29 PM.jpeg",
+      website: "https://www.futureproptechsummit.com/",
+    },
   ]
 
   return (
