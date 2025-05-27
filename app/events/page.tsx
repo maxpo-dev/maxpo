@@ -29,7 +29,7 @@ export default function UpcomingEvents() {
   // Events data
   const eventsData: Event[] = [
     {
-      id: 1,
+      id: 2,
       title: "GMEC India 2025",
       date: "June 20-22, 2025",
       location: "Palace Ground, Bengaluru",
@@ -51,7 +51,7 @@ export default function UpcomingEvents() {
     //   website: "https://www.indiapropertyshow.in/",
     // },
     {
-      id: 3,
+      id: 1,
       title: "Future Digitech Summit & Awards 2025",
       date: "28-29 May 2025",
       location: "Pullman, Kuala Lumpur City Centre, Malaysia",
@@ -61,8 +61,18 @@ export default function UpcomingEvents() {
       category: "Conference and Awards",
       website: "https://www.futuredigitechsummit.com/",
     },
+        {
+  id: 4,
+  title: "Revolution EV",
+  date: "23-24 October, 2025",
+  location: "WTC, KL, Malaysia",
+  image: "/images/events/revolutionev.jpg", // <- Make sure this image exists or update the path accordingly
+  description: "Revolution EV Malaysia 2025 (#rev25) is the nation’s premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
+  category: "Conference",
+  website: "https://www.futureproptechsummit.com/", // <- Confirm if this link is specific to Revolution EV
+},
     {
-      id: 4,
+      id: 3,
       title: "Future Proptech Summit",
       date: "14-15 October 2025",
       location: "Le Méridien Hotel, Airport Road, Dubai",
