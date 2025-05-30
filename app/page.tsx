@@ -27,16 +27,16 @@ export default function Home() {
     //   category: "Exhibition",
     //   website: "",
     // },
-    {
-      id: 1,
-      title: "Future Digitech Summit & Awards 2025",
-      date: "28-29 May 2025",
-      location: "Pullman, Kuala Lumpur City Centre, Malaysia",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
-      description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
-      category: "Conference and Awards",
-      website:"https://www.futureproptechsummit.com/",
-    },
+    // {
+    //   id: 1,
+    //   title: "Future Digitech Summit & Awards 2025",
+    //   date: "28-29 May 2025",
+    //   location: "Pullman, Kuala Lumpur City Centre, Malaysia",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
+    //   description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
+    //   category: "Conference and Awards",
+    //   website:"https://www.futureproptechsummit.com/",
+    // },
         {
       id: 2,
       title: "GMEC India 2025",
@@ -68,7 +68,7 @@ export default function Home() {
   image: "/images/events/revolutionev.jpg", // <- Make sure this image exists or update the path accordingly
   description: "Revolution EV Malaysia 2025 (#rev25) is the nation’s premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
   category: "Conference",
-  website: "https://www.futureproptechsummit.com/", // <- Confirm if this link is specific to Revolution EV
+  website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
 },
   ]
 
