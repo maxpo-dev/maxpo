@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import { ArrowDown, ArrowRight, Calendar, Check, MapPin } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import PastEvents from "../components/PastEvents"
 
 // Define event types
 type EventType = "All Events" | "Exhibition" | "Conferences" | "Conference and Awards"
@@ -28,7 +29,7 @@ export default function UpcomingEvents() {
   // Events data
   const eventsData: Event[] = [
     {
-      id: 1,
+      id: 2,
       title: "GMEC India 2025",
       date: "June 20-22, 2025",
       location: "Palace Ground, Bengaluru",
@@ -38,30 +39,40 @@ export default function UpcomingEvents() {
       category: "Exhibition",
       website: "https://gmecexhibitions.in/",
     },
-    {
-      id: 2,
-      title: "Gulf News presents India Property Show",
-      date: "17-18 May 2025",
-      location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
-      description:
-        "India's real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
-      category: "Exhibition",
-      website: "https://www.indiapropertyshow.in/",
-    },
+    // {
+    //   id: 2,
+    //   title: "Gulf News presents India Property Show",
+    //   date: "17-18 May 2025",
+    //   location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
+    //   description:
+    //     "India's real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
+    //   category: "Exhibition",
+    //   website: "https://www.indiapropertyshow.in/",
+    // },
+    // {
+    //   id: 1,
+    //   title: "Future Digitech Summit & Awards 2025",
+    //   date: "28-29 May 2025",
+    //   location: "Pullman, Kuala Lumpur City Centre, Malaysia",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
+    //   description:
+    //     "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
+    //   category: "Conference and Awards",
+    //   website: "https://www.futuredigitechsummit.com/",
+    // },
+        {
+  id: 4,
+  title: "Revolution EV",
+  date: "23-24 October, 2025",
+  location: "WTC, KL, Malaysia",
+  image: "/images/events/revolutionev.jpg", // <- Make sure this image exists or update the path accordingly
+  description: "Revolution EV Malaysia 2025 (#rev25) is the nation’s premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
+  category: "Conference",
+  website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
+},
     {
       id: 3,
-      title: "Future Digitech Summit & Awards 2025",
-      date: "28-29 May 2025",
-      location: "Pullman, Kuala Lumpur City Centre, Malaysia",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
-      description:
-        "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
-      category: "Conference and Awards",
-      website: "https://www.futuredigitechsummit.com/",
-    },
-    {
-      id: 4,
       title: "Future Proptech Summit",
       date: "14-15 October 2025",
       location: "Le Méridien Hotel, Airport Road, Dubai",
@@ -321,6 +332,11 @@ export default function UpcomingEvents() {
 
 
 
+{/* ........................................... */}
+<center>        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl mb-4">
+          Upcoming <span className="text-blue-600">Events</span>
+        </h2></center>
+{/* ........................... */}
       {/* Events Filter with Animation */}
       <motion.section
         className="bg-white py-12"
@@ -365,6 +381,7 @@ export default function UpcomingEvents() {
 
       {/* Upcoming Events List with Staggered Animation */}
       <section className="bg-white py-12">
+      
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
             {sortedEvents.length === 0 ? (
@@ -416,7 +433,7 @@ export default function UpcomingEvents() {
                           src={event.image || "/placeholder.svg"}
                           alt={event.title}
                           fill
-                          className="object-cover"
+                          className=""
                         />
                       </motion.div>
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
@@ -576,6 +593,8 @@ export default function UpcomingEvents() {
           </motion.div>
         </div>
       </motion.section> */}
+
+      <PastEvents />
 
       {/* Newsletter with Floating Animation */}
       <motion.section

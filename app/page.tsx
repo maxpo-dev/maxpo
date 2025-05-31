@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/app/components/navbar"
 import { Typewriter } from "react-simple-typewriter"
+
 // import { useState } from "react"
 // import Footer from "@/app/components/footer"
 
@@ -15,8 +16,29 @@ export default function Home() {
 
   // Sample upcoming events data
   const upcomingEvents = [
-    {
-      id: 1,
+
+    // {
+    //   id: 2,
+    //   title: "Gulf News presents India Property Show",
+    //   date: "17-18 May 2025",
+    //   location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
+    //   description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
+    //   category: "Exhibition",
+    //   website: "",
+    // },
+    // {
+    //   id: 1,
+    //   title: "Future Digitech Summit & Awards 2025",
+    //   date: "28-29 May 2025",
+    //   location: "Pullman, Kuala Lumpur City Centre, Malaysia",
+    //   image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
+    //   description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
+    //   category: "Conference and Awards",
+    //   website:"https://www.futureproptechsummit.com/",
+    // },
+        {
+      id: 2,
       title: "GMEC India 2025",
       date: "June 20-22, 2025",
       location: "Palace Ground, Bengaluru",
@@ -25,26 +47,29 @@ export default function Home() {
       category: "Exhibition",
       website: "https://gmecexhibitions.in/",
     },
-    {
-      id: 2,
-      title: "Gulf News presents India Property Show",
-      date: "17-18 May 2025",
-      location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
-      description: "India’s real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
-      category: "Exhibition",
-      website: "",
-    },
-    {
+
+
+        {
       id: 3,
-      title: "Future Digitech Summit & Awards 2025",
-      date: "28-29 May 2025",
-      location: "Pullman, Kuala Lumpur City Centre, Malaysia",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
-      description: "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
-      category: "Conference and Awards",
-      website:"https://www.futureproptechsummit.com/",
+      title: "Future Proptech Summit",
+      date: "14-15 October 2025",
+      location: "Le Méridien Hotel, Airport Road, Dubai",
+      description:
+        "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. ",
+      category: "Conferences",
+      image: "/images/events/WhatsApp Image 2025-03-21 at 6.14.29 PM.jpeg",
+      website: "https://www.futureproptechsummit.com/",
     },
+        {
+  id: 4,
+  title: "Revolution EV",
+  date: "23-24 October, 2025",
+  location: "WTC, KL, Malaysia",
+  image: "/images/events/revolutionev.jpg", // <- Make sure this image exists or update the path accordingly
+  description: "Revolution EV Malaysia 2025 (#rev25) is the nation’s premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
+  category: "Conference",
+  website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
+},
   ]
 
   return (
@@ -239,6 +264,11 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+
+  
+
+    
 
       {/* Our Essence */}
       <section className="bg-blue-950 py-24 text-white">
