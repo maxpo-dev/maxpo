@@ -496,15 +496,16 @@ export default function Careers() {
                   filled with fresh perspectives. We challenge conventional thinking, explore new possibilities, and
                   turn ambitious ideas into reality.
                 </p>
-                <p>
-                  We operate in a world that's constantly evolving, and we embrace that change. Our team stays ahead of
-                  industry trends, new technologies, and market shifts to ensure our events remain relevant, impactful,
-                  and future-focused.
-                </p>
-                <p>
-                  At the core of it all, Maxpo is more than a team—we're a force for change in the industry, shaping the
-                  future of global trade shows and business connections.
-                </p>
+<p>
+  We operate in a world that&apos;s constantly evolving, and we embrace that change. Our team stays ahead of
+  industry trends, new technologies, and market shifts to ensure our events remain relevant, impactful,
+  and future-focused.
+</p>
+<p>
+  At the core of it all, Maxpo is more than a team—we&apos;re a force for change in the industry, shaping the
+  future of global trade shows and business connections.
+</p>
+
               </div>
             </motion.div>
           </motion.div>
@@ -556,8 +557,9 @@ export default function Careers() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <p className="mb-6 text-gray-600">
-              Don't see a position that matches your skills? We're always looking for talented individuals to join our
-              team.
+              {
+                "Don't see a position that matches your skills? We're always looking for talented individuals to join our team."
+              }
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
@@ -614,9 +616,9 @@ export default function Careers() {
               <div>
                 <h3 className="mb-3 text-2xl font-semibold">Learn from Industry Experts</h3>
                 <p className="text-gray-600">
-                  Our internship program offers a unique opportunity to work alongside experienced professionals and
-                  gain valuable insights into the exhibition industry. You'll be involved in real projects and
-                  contribute to the success of our events.
+                  {
+                    "Our internship program offers a unique opportunity to work alongside experienced professionals and gain valuable insights into the exhibition industry. You'll be involved in real projects and contribute to the success of our events."
+                  }
                 </p>
               </div>
 
@@ -632,8 +634,9 @@ export default function Careers() {
               <div>
                 <h3 className="mb-3 text-2xl font-semibold">Potential for Full-Time Roles</h3>
                 <p className="text-gray-600">
-                  Many of our full-time team members started as interns. We're committed to identifying and nurturing
-                  talent, with opportunities for exceptional interns to join our team permanently.
+                  {
+                    "Many of our full-time team members started as interns. We're committed to identifying and nurturing talent, with opportunities for exceptional interns to join our team permanently."
+                  }
                 </p>
               </div>
 
