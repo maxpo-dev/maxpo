@@ -1,10 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Calendar, MapPin, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 const pastEvents = [
   {
@@ -13,7 +11,8 @@ const pastEvents = [
     date: '17-18 May 2025',
     location: 'Crowne Plaza, Sheikh Zayed Road, Dubai',
     image: '/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg',
-    description: 'India’s real estate sector remains a key economic growth pillar, attracting global investors and NRIs seeking high returns...',
+    description:
+      'India’s real estate sector remains a key economic growth pillar, attracting global investors and NRIs seeking high returns...',
     category: 'Exhibition',
     website: 'https://www.indiapropertyshow.in/',
   },
@@ -23,7 +22,8 @@ const pastEvents = [
     date: '28-29 May 2025',
     location: 'Pullman, Kuala Lumpur City Centre, Malaysia',
     image: '/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg',
-    description: 'Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders gathered to explore AI, PropTech, and the future of innovation...',
+    description:
+      'Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders gathered to explore AI, PropTech, and the future of innovation...',
     category: 'Conference and Awards',
     website: 'https://www.futuredigitechsummit.com/',
   },
@@ -85,7 +85,11 @@ export default function PastEvents() {
               }}
             >
               <div className="relative h-80 overflow-hidden">
-                <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }} className="h-full w-full">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5 }}
+                  className="h-full w-full"
+                >
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -128,11 +132,22 @@ export default function PastEvents() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-medium text-black"
                     whileHover={{ x: 5 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 10,
+                    }}
                     onClick={(e) => e.stopPropagation()}
                   >
                     View Recap{' '}
-                    <motion.div whileHover={{ x: 3 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+                    <motion.div
+                      whileHover={{ x: 3 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                    >
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </motion.div>
                   </motion.a>
