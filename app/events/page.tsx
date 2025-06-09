@@ -39,6 +39,17 @@ export default function UpcomingEvents() {
       category: "Exhibition",
       website: "https://gmecexhibitions.in/",
     },
+        {
+      id: 2,
+      title: "GlobalFintechSummi",
+      date: "October 08-09, 2025",
+      location: "Johannesburg, South Africa",
+      image: "/images/events/fintech-event.jpg",
+      description:
+        "Global Fintech Summit and Awards 2025 is a dedicated event to shape the future of finance through innovation, collaboration, and strategic dialogue. The summit brings together key stakeholders across the global financial ecosystem including banking leaders, fintech innovators, regulators, investors, and policymakers to explore transformative ideas and technologies.",
+      category: "Exhibition",
+      website: "https://www.globalfintechsummit.net/",
+    },
     // {
     //   id: 2,
     //   title: "Gulf News presents India Property Show",
@@ -61,6 +72,8 @@ export default function UpcomingEvents() {
     //   category: "Conference and Awards",
     //   website: "https://www.futuredigitechsummit.com/",
     // },
+
+    
         {
   id: 4,
   title: "Revolution EV",

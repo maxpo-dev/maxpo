@@ -3,7 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Loader2, CheckCircle } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Loader2,
+  CheckCircle,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,42 +25,40 @@ export default function Footer() {
     message: string;
   } | null>(null);
 
-
   async function handleSubscribe(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault() // Prevent default form submission behavior
-    setIsSubmitting(true)
-    setSubscriptionStatus(null)
-  
+    event.preventDefault(); // Prevent default form submission behavior
+    setIsSubmitting(true);
+    setSubscriptionStatus(null);
+
     // Create FormData from the form
-    const formData = new FormData(event.currentTarget)
-  
+    const formData = new FormData(event.currentTarget);
+
     try {
       const response = await fetch("/api/action", {
         method: "POST",
         body: formData,
-      })
-  
-      const result = await response.json()
-      setSubscriptionStatus(result)
-  
+      });
+
+      const result = await response.json();
+      setSubscriptionStatus(result);
+
       if (result.success) {
-        setEmail("")
+        setEmail("");
         setTimeout(() => {
-          setSubscriptionStatus(null)
-        }, 5000)
+          setSubscriptionStatus(null);
+        }, 5000);
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setSubscriptionStatus({
         success: false,
         message: "Something went wrong. Please try again later.",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
-  
-  
+
   return (
     <footer className="bg-blue-950 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -68,8 +75,8 @@ export default function Footer() {
               </div>
             </Link>
             <p className="mb-6 text-gray-400">
-              Redefining the business event landscape by creating dynamic trade shows, conferences, and immersive
-              experiences.
+              Redefining the business event landscape by creating dynamic trade
+              shows, conferences, and immersive experiences.
             </p>
             <div className="flex gap-4">
               <Link
@@ -107,32 +114,50 @@ export default function Footer() {
             <h3 className="mb-6 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/about"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/events"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/services"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/careers"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/contact"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 transition-colors hover:text-white">
+                <Link
+                  href="/privacy"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
                   Privacy Policy
                 </Link>
               </li>
@@ -147,11 +172,13 @@ export default function Footer() {
                 <span className="text-gray-400">Dubai, UAE </span>
               </li>
               <li className="flex items-start gap-3">
-  <MapPin className="mt-1 h-10 w-10 text-gray-400" />
-  <span className="text-gray-400">
-    India Office : No.50, Pulikeshi Nagar, 2nd Floor, Frazer Town, MM Road, Bengaluru - 05
-  </span>
-</li>
+                <MapPin className="mt-1 h-5 w-5 text-gray-400" />
+                <span className="text-gray-400">Bengaluru, India</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-1 h-5 w-5 text-gray-400" />
+                <span className="text-gray-400">Srinagar, India</span>
+              </li>
 
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gray-400" />
@@ -162,7 +189,9 @@ export default function Footer() {
 
           <div>
             <h3 className="mb-6 text-lg font-semibold">Subscribe</h3>
-            <p className="mb-4 text-gray-400">Stay updated with our latest events and news.</p>
+            <p className="mb-4 text-gray-400">
+              Stay updated with our latest events and news.
+            </p>
             <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
               <Input
                 type="email"
@@ -173,7 +202,11 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <Button type="submit" className="w-full bg-white text-black hover:bg-gray-200" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full bg-white text-black hover:bg-gray-200"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -188,10 +221,14 @@ export default function Footer() {
               {subscriptionStatus && (
                 <div
                   className={`mt-2 flex items-center gap-2 rounded-md p-2 text-sm ${
-                    subscriptionStatus.success ? "bg-green-900/30 text-green-300" : "bg-red-900/30 text-red-300"
+                    subscriptionStatus.success
+                      ? "bg-green-900/30 text-green-300"
+                      : "bg-red-900/30 text-red-300"
                   }`}
                 >
-                  {subscriptionStatus.success ? <CheckCircle className="h-4 w-4" /> : null}
+                  {subscriptionStatus.success ? (
+                    <CheckCircle className="h-4 w-4" />
+                  ) : null}
                   <p>{subscriptionStatus.message}</p>
                 </div>
               )}
@@ -200,7 +237,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} Maxpo Exhibitions. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Maxpo Exhibitions. All rights reserved.
+          </p>
           <div className="mt-2 flex justify-center gap-4">
             <Link href="/privacy" className="hover:text-white">
               Privacy Policy
