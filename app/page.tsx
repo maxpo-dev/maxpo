@@ -37,25 +37,16 @@ export default function Home() {
     //   category: "Conference and Awards",
     //   website:"https://www.futureproptechsummit.com/",
     // },
-        {
-      id: 2,
-      title: "GMEC India 2025",
-      date: "June 20-22, 2025",
-      location: "Palace Ground, Bengaluru",
-      image: "/images/events/gmec.jpeg",
-      description: "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
-      category: "Exhibition",
-      website: "https://gmecexhibitions.in/",
-    },
+
             {
       id: 2,
-      title: "GlobalFintechSummi",
+      title: "Global Fintech Summit",
       date: "October 08-09, 2025",
       location: "Johannesburg, South Africa",
       image: "/images/events/fintech-event.jpg",
       description:
         "Global Fintech Summit and Awards 2025 is a dedicated event to shape the future of finance through innovation, collaboration, and strategic dialogue. The summit brings together key stakeholders across the global financial ecosystem including banking leaders, fintech innovators, regulators, investors, and policymakers to explore transformative ideas and technologies.",
-      category: "Exhibition",
+      category: "Conference",
       website: "https://www.globalfintechsummit.net/",
     },
 
@@ -67,7 +58,7 @@ export default function Home() {
       location: "Le Méridien Hotel, Airport Road, Dubai",
       description:
         "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. ",
-      category: "Conferences",
+      category: "Conference",
       image: "/images/events/WhatsApp Image 2025-03-21 at 6.14.29 PM.jpeg",
       website: "https://www.futureproptechsummit.com/",
     },
