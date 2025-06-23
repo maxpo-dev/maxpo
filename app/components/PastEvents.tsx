@@ -27,6 +27,17 @@ const pastEvents = [
     category: 'Conference and Awards',
     website: 'https://www.futuredigitechsummit.com/',
   },
+      {
+      id: 2,
+      title: "GMEC India 2025",
+      date: "June 20-22, 2025",
+      location: "Palace Ground, Bengaluru",
+      image: "/images/events/gmec.jpeg",
+      description:
+        "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
+      category: "Exhibition",
+      website: "https://gmecexhibitions.in/",
+    },
 ]
 
 const containerVariants = {
