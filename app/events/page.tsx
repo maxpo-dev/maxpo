@@ -62,7 +62,7 @@ const eventsData: Event[] = [
   },
           {
       id: 5,
-      title: "Health-5 ",
+      title: "ASIA Health-5",
       date: "December 2nd , 3rd and 4th 2025",
       location: "WTC,  KL- Malaysia",
       description:
