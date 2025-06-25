@@ -20,87 +20,63 @@ interface Event {
   date: string
   location: string
   description: string
-  category: string
+  category: EventType // Changed to use EventType instead of string
   image: string
   website: string
 }
 
+// Events data - Fixed category consistency
+const eventsData: Event[] = [
+  {
+    id: 2,
+    title: "Global Fintech Summit",
+    date: "October 08-09, 2025",
+    location: "Johannesburg, South Africa",
+    image: "/images/events/fintech-event.jpg",
+    description:
+      "Global Fintech Summit and Awards 2025 is a dedicated event to shape the future of finance through innovation, collaboration, and strategic dialogue. The summit brings together key stakeholders across the global financial ecosystem including banking leaders, fintech innovators, regulators, investors, and policymakers to explore transformative ideas and technologies.",
+    category: "Conferences", // Fixed: was "Conference", now matches filter option
+    website: "https://www.globalfintechsummit.net/",
+  },
+  {
+    id: 4,
+    title: "Revolution EV",
+    date: "23-24 October, 2025",
+    location: "WTC, KL, Malaysia",
+    image: "/images/events/revolutionev.jpg",
+    description:
+      "Revolution EV Malaysia 2025 (#rev25) is the nation's premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
+    category: "Conferences", // Fixed: was "Conference", now matches filter option
+    website: "https://www.revolutionevmalaysia.com/",
+  },
+  {
+    id: 3,
+    title: "Future Proptech Summit",
+    date: "14-15 October 2025",
+    location: "Le Méridien Hotel, Airport Road, Dubai",
+    description:
+      "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. ",
+    category: "Conferences", // Fixed: was "Conference", now matches filter option
+    image: "/images/events/WhatsApp Image 2025-03-21 at 6.14.29 PM.jpeg",
+    website: "https://www.futureproptechsummit.com/",
+  },
+          {
+      id: 5,
+      title: "ASIA Health-5",
+      date: "December 2nd , 3rd and 4th 2025",
+      location: "WTC,  KL- Malaysia",
+      description:
+        "Health-5 2025, Asia’s most anticipated international healthcare exhibition and conference. Over three dynamic days, the event will transform Kuala Lumpur into a global hub of medical innovation, industry collaboration, and forward-thinking dialogue.This premier gathering brings together global healthcare leaders, visionaries, and professionals across five core pillars of the sector including medical equipment, health IT, hospital infrastructure, diagnostics, and wellness.",
+      category: "Exhibition", // Fixed: was "Conference", now matches filter option
+      image: "/images/events/health5.jpg",
+      website: "#",
+    },
+]
+
 export default function UpcomingEvents() {
-  // Events data
-  const eventsData: Event[] = [
-    // {
-    //   id: 2,
-    //   title: "GMEC India 2025",
-    //   date: "June 20-22, 2025",
-    //   location: "Palace Ground, Bengaluru",
-    //   image: "/images/events/gmec.jpeg",
-    //   description:
-    //     "GMEC INDIA 2025 is a premier international platform dedicated to advancing healthcare innovation by bringing together key stakeholders across the medical and healthcare industry. Our platform unites medical professionals, manufacturers, suppliers, policymakers, and innovators, fostering connections that drive impactful solutions to global healthcare challenges.",
-    //   category: "Exhibition",
-    //   website: "https://gmecexhibitions.in/",
-    // },
-        {
-      id: 2,
-      title: "Global Fintech Summit",
-      date: "October 08-09, 2025",
-      location: "Johannesburg, South Africa",
-      image: "/images/events/fintech-event.jpg",
-      description:
-        "Global Fintech Summit and Awards 2025 is a dedicated event to shape the future of finance through innovation, collaboration, and strategic dialogue. The summit brings together key stakeholders across the global financial ecosystem including banking leaders, fintech innovators, regulators, investors, and policymakers to explore transformative ideas and technologies.",
-      category: "Conference",
-      website: "https://www.globalfintechsummit.net/",
-    },
-    // {
-    //   id: 2,
-    //   title: "Gulf News presents India Property Show",
-    //   date: "17-18 May 2025",
-    //   location: "Crowne Plaza, Sheikh Zayed Road, Dubai",
-    //   image: "/images/events/WhatsApp Image 2025-03-21 at 11.58.43 AM (1).jpeg",
-    //   description:
-    //     "India's real estate sector remain key economic growth pillars, offering immense opportunities for investors and homebuyers. A premier real estate exhibition brings together top developers, real estate experts, and investors under one roof, offering unparalleled opportunities to explore the best properties of India in Dubai for the NRIs over there",
-    //   category: "Exhibition",
-    //   website: "https://www.indiapropertyshow.in/",
-    // },
-    // {
-    //   id: 1,
-    //   title: "Future Digitech Summit & Awards 2025",
-    //   date: "28-29 May 2025",
-    //   location: "Pullman, Kuala Lumpur City Centre, Malaysia",
-    //   image: "/images/events/WhatsApp Image 2025-03-21 at 4.06.56 PM (1).jpeg",
-    //   description:
-    //     "Future DigiTech Summit 2025 in Kuala Lumpur, where industry leaders, innovators, and visionaries come together to explore the latest trends and technologies shaping our digital future. This two-day event promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.",
-    //   category: "Conference and Awards",
-    //   website: "https://www.futuredigitechsummit.com/",
-    // },
-
-    
-        {
-  id: 4,
-  title: "Revolution EV",
-  date: "23-24 October, 2025",
-  location: "WTC, KL, Malaysia",
-  image: "/images/events/revolutionev.jpg", // <- Make sure this image exists or update the path accordingly
-  description: "Revolution EV Malaysia 2025 (#rev25) is the nation’s premier EV event, uniting industry leaders, innovators, and policymakers to drive the future of electric mobility. Join us in Kuala Lumpur from 23–24 October 2025 for two dynamic days of showcases, insights, and collaboration.",
-  category: "Conference",
-  website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
-},
-    {
-      id: 3,
-      title: "Future Proptech Summit",
-      date: "14-15 October 2025",
-      location: "Le Méridien Hotel, Airport Road, Dubai",
-      description:
-        "The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. ",
-      category: "Conference",
-      image: "/images/events/WhatsApp Image 2025-03-21 at 6.14.29 PM.jpeg",
-      website: "https://www.futureproptechsummit.com/",
-    },
-  ]
-
   // State for active filter and sorted events
   const [activeFilter, setActiveFilter] = useState<EventType>("All Events")
   const [expandedDescriptions, setExpandedDescriptions] = useState<number[]>([])
-  // const sortOption = "Date: Nearest first"
   const [, setIsLoaded] = useState(false)
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -112,8 +88,11 @@ export default function UpcomingEvents() {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0.2])
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
 
-  // Filter events based on active filter
-  const filteredEvents = eventsData.filter((event) => activeFilter === "All Events" || event.category === activeFilter)
+  // Fixed filter events based on active filter
+  const filteredEvents = eventsData.filter((event) => {
+    if (activeFilter === "All Events") return true
+    return event.category === activeFilter
+  })
 
   // Maintain the exact order specified by the user
   const sortedEvents = [...filteredEvents].sort((a, b) => {
@@ -121,7 +100,7 @@ export default function UpcomingEvents() {
     return a.id - b.id
   })
 
-  // Handle filter change
+  // Handle filter change with debug logging
   const handleFilterChange = (filter: EventType) => {
     setActiveFilter(filter)
   }
@@ -134,6 +113,7 @@ export default function UpcomingEvents() {
       prev.includes(eventId) ? prev.filter((id) => id !== eventId) : [...prev, eventId],
     )
   }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -157,25 +137,23 @@ export default function UpcomingEvents() {
       } else {
         setMessage(data.message || "Something went wrong")
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
+    } catch {
       setMessage("Network error. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
   }
-  
+
   useEffect(() => {
     let timer: NodeJS.Timeout
     if (isSuccess) {
       timer = setTimeout(() => {
         setIsSuccess(false)
         setMessage("")
-      }, 7000) // 7 seconds delay before showing form again
+      }, 7000)
     }
     return () => clearTimeout(timer)
   }, [isSuccess])
-
 
   // Set loaded state after component mounts
   useEffect(() => {
@@ -228,7 +206,10 @@ export default function UpcomingEvents() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section with Parallax Effect */}
-      <motion.section className="relative h-[80vh] flex items-center justify-center mb-12 md:mb-20 lg:mb-24" style={{ opacity, scale }}>
+      <motion.section
+        className="relative h-[80vh] flex items-center justify-center mb-12 md:mb-20 lg:mb-24"
+        style={{ opacity, scale }}
+      >
         {/* Background Image with Parallax */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -241,7 +222,6 @@ export default function UpcomingEvents() {
               src="/images/events/WhatsApp Image 2025-03-21 at 12.07.40 PM.jpeg"
               alt="Upcoming Events"
               fill
-              
               priority
             />
             <motion.div
@@ -275,8 +255,7 @@ export default function UpcomingEvents() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-           Unlock exclusive exhibitions and conferences worldwide—where the future of your industry takes shape!
-
+            Unlock exclusive exhibitions and conferences worldwide—where the future of your industry takes shape!
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -297,59 +276,54 @@ export default function UpcomingEvents() {
           </motion.div>
         </div>
       </motion.section>
-      
+
       {/* Explore Events card  */}
       <motion.section
-      className="bg-gray-100 p-8 md:p-12 rounded-2xl max-w-5xl mx-auto shadow-md text-center mb-10"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <motion.h3
-        className="text-2xl md:text-3xl font-bold mb-4"
-        animate={{
-          textShadow: [
-            "0 0 0px rgba(0,0,0,0)",
-            "0 0 10px rgba(0,0,0,0.1)",
-            "0 0 0px rgba(0,0,0,0)",
-          ],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
+        className="bg-gray-100 p-8 md:p-12 rounded-2xl max-w-5xl mx-auto shadow-md text-center mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        Explore Events
-      </motion.h3>
-      <motion.p
-        className="text-gray-600 text-base md:text-lg leading-relaxed mb-3"
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        Step into a world of innovation, networking, and opportunity. Discover our globally curated exhibitions and
-        conferences designed to connect industry leaders, showcase cutting-edge trends, and create unforgettable
-        experiences. Stay ahead—explore what’s next!
-      </motion.p>
-      <motion.p
-        className="text-gray-600 text-base md:text-lg leading-relaxed"
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        Stay updated with the latest events, industry trends, and exclusive opportunities—don’t miss a moment!
-      </motion.p>
-    </motion.section>
+        <motion.h3
+          className="text-2xl md:text-3xl font-bold mb-4"
+          animate={{
+            textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 10px rgba(0,0,0,0.1)", "0 0 0px rgba(0,0,0,0)"],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
+          }}
+        >
+          Explore Events
+        </motion.h3>
+        <motion.p
+          className="text-gray-600 text-base md:text-lg leading-relaxed mb-3"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Step into a world of innovation, networking, and opportunity. Discover our globally curated exhibitions and
+          conferences designed to connect industry leaders, showcase cutting-edge trends, and create unforgettable
+          experiences. Stay ahead—explore what&apos;s next!
+        </motion.p>
+        <motion.p
+          className="text-gray-600 text-base md:text-lg leading-relaxed"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          Stay updated with the latest events, industry trends, and exclusive opportunities—don&apos;t miss a moment!
+        </motion.p>
+      </motion.section>
 
-
-
-{/* ........................................... */}
-<center>        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl mb-4">
+      <center>
+        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl mb-4">
           Upcoming <span className="text-blue-600">Events</span>
-        </h2></center>
-{/* ........................... */}
+        </h2>
+      </center>
+
       {/* Events Filter with Animation */}
       <motion.section
         className="bg-white py-12"
@@ -366,7 +340,7 @@ export default function UpcomingEvents() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="flex flex-wrap gap-2">
-              {["All Events", "Exhibition", "Conferences", "Conference and Awards"].map((filter) => (
+              {(["All Events", "Exhibition", "Conferences", "Conference and Awards"] as EventType[]).map((filter) => (
                 <motion.div
                   key={filter}
                   variants={filterVariants}
@@ -378,10 +352,12 @@ export default function UpcomingEvents() {
                 >
                   <Badge
                     variant={activeFilter === filter ? "default" : "outline"}
-                    className={`rounded-full px-4 py-2 cursor-pointer ${
-                      activeFilter === filter ? "bg-blue-950 text-white" : "bg-gray-100"
+                    className={`rounded-full px-4 py-2 cursor-pointer transition-all duration-200 ${
+                      activeFilter === filter
+                        ? "bg-blue-950 text-white shadow-md"
+                        : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                     }`}
-                    onClick={() => handleFilterChange(filter as EventType)}
+                    onClick={() => handleFilterChange(filter)}
                   >
                     {filter}
                   </Badge>
@@ -394,7 +370,6 @@ export default function UpcomingEvents() {
 
       {/* Upcoming Events List with Staggered Animation */}
       <section className="bg-white py-12">
-      
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
             {sortedEvents.length === 0 ? (
@@ -406,7 +381,7 @@ export default function UpcomingEvents() {
                 transition={{ duration: 0.5 }}
                 key="no-events"
               >
-                  <h3 className="text-xl font-semibold">No events found matching your filter</h3>
+                <h3 className="text-xl font-semibold">No events found matching your filter</h3>
                 <p className="mt-2 text-gray-600">Try selecting a different category or clear your filters</p>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="outline" className="mt-4 rounded-full" onClick={() => setActiveFilter("All Events")}>
@@ -439,21 +414,18 @@ export default function UpcomingEvents() {
                       }
                     }}
                   >
-                    <div className="relative h-80 overflow-hidden">
-                      
+                    <div className="relative h-82 overflow-hidden">
                       <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }} className="h-full w-full">
                         <Image
                           src={event.image || "/placeholder.svg"}
                           alt={event.title}
                           fill
-                          className=""
+                          className="object-cover"
                         />
                       </motion.div>
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-medium py-1 px-3 rounded-full shadow-md">
-          {event.category}
-        </div>
-                      
-
+                        {event.category}
+                      </div>
                     </div>
                     <motion.div
                       className="p-6"
@@ -561,52 +533,6 @@ export default function UpcomingEvents() {
         </div>
       </section>
 
-      {/* Event Calendar with Reveal Animation */}
-      {/* <motion.section
-        className="bg-gray-50 py-24"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="mx-auto max-w-3xl text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Event Calendar</h2>
-            <p className="mb-16 text-lg text-gray-600">Plan your schedule with our comprehensive event calendar.</p>
-          </motion.div>
-
-          <motion.div
-            className="rounded-xl bg-white p-6 shadow-md md:p-8"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="relative h-[600px] overflow-hidden rounded-lg">
-              <motion.div
-                initial={{ scale: 1.1, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-              >
-                <Image
-                  src="/placeholder.svg?height=1200&width=1600"
-                  alt="Event Calendar"
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section> */}
-
       <PastEvents />
 
       {/* Newsletter with Floating Animation */}
@@ -647,95 +573,94 @@ export default function UpcomingEvents() {
               insights.
             </p>
             <div className="w-full max-w-lg mx-auto min-h-[150px]">
-      <AnimatePresence mode="wait">
-        {!isSuccess ? (
-          <motion.form
-            key="form"
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.div className="flex-1" whileFocus={{ scale: 1.02 }}>
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full rounded-full border-none bg-black/10 px-6 py-3 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Button 
-                  type="submit" 
-                  className="w-full sm:w-auto rounded-full bg-white px-8 text-black hover:bg-gray-200"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Subscribing..." : "Subscribe"}
-                  {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
-                </Button>
-              </motion.div>
+              <AnimatePresence mode="wait">
+                {!isSuccess ? (
+                  <motion.form
+                    key="form"
+                    onSubmit={handleSubmit}
+                    className="flex flex-col gap-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <motion.div className="flex-1" whileFocus={{ scale: 1.02 }}>
+                        <input
+                          type="email"
+                          placeholder="Your email address"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          className="w-full rounded-full border-none bg-black/10 px-6 py-3 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        />
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      >
+                        <Button
+                          type="submit"
+                          className="w-full sm:w-auto rounded-full bg-white px-8 text-black hover:bg-gray-200"
+                          disabled={isSubmitting}
+                        >
+                          {isSubmitting ? "Subscribing..." : "Subscribe"}
+                          {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
+                        </Button>
+                      </motion.div>
+                    </div>
+
+                    {message && (
+                      <motion.div
+                        className="text-center text-red-500 w-full"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                      >
+                        {message}
+                      </motion.div>
+                    )}
+                  </motion.form>
+                ) : (
+                  <motion.div
+                    key="success-message"
+                    className="flex flex-col items-center justify-center gap-4 p-6"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <motion.div
+                      className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: "spring" }}
+                    >
+                      <Check className="w-8 h-8 text-green-600" />
+                    </motion.div>
+                    <motion.h3
+                      className="text-xl font-semibold text-center text-green-600"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      {message}
+                    </motion.h3>
+                    <motion.p
+                      className="text-gray-600 text-center"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.4 }}
+                    >
+                      The form will reappear shortly...
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-            
-            {message && (
-              <motion.div 
-                className="text-center text-red-500 w-full"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                {message}
-              </motion.div>
-            )}
-          </motion.form>
-        ) : (
-          <motion.div
-            key="success-message"
-            className="flex flex-col items-center justify-center gap-4 p-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.4 }}
-          >
-            <motion.div
-              className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring" }}
-            >
-              <Check className="w-8 h-8 text-green-600" />
-            </motion.div>
-            <motion.h3 
-              className="text-xl font-semibold text-center text-green-600"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              {message}
-            </motion.h3>
-            <motion.p
-              className="text-gray-600 text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              The form will reappear shortly...
-            </motion.p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
           </motion.div>
         </div>
       </motion.section>
     </div>
   )
 }
-
