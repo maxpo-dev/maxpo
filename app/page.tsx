@@ -72,6 +72,19 @@ export default function Home() {
   category: "Conference",
   website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
 },
+        {
+      id: 5,
+      title: "Health-5 ",
+      date: "December 2nd , 3rd and 4th 2025",
+      location: "WTC,  KL- Malaysia",
+      description:
+        "Health-5 2025, Asia’s most anticipated international healthcare exhibition and conference. Over three dynamic days, the event will transform Kuala Lumpur into a global hub of medical innovation, industry collaboration, and forward-thinking dialogue.This premier gathering brings together global healthcare leaders, visionaries, and professionals across five core pillars of the sector including medical equipment, health IT, hospital infrastructure, diagnostics, and wellness.",
+      category: "Exhibition", // Fixed: was "Conference", now matches filter option
+      image: "/images/events/health5.jpg",
+      website: "#",
+    },
+
+
   ]
 
   return (
