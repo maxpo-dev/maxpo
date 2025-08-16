@@ -72,7 +72,52 @@ export default function Home() {
   category: "Conference",
   website: "https://www.revolutionevmalaysia.com/", // <- Confirm if this link is specific to Revolution EV
 },
-        {
+{
+  id: 6,
+  title: "India Edu-Fair",
+  date: "15-16 November, 2025",
+  location: "Dubai",
+  description:
+    "The India Edu-Fair in Dubai is a premier platform for students and parents to explore higher education opportunities from India and across the globe. Featuring over 35 leading institutions, the event connects aspiring learners with top universities, colleges, and training institutes. Held biannually, the Edu-Fair provides personalized counseling sessions, workshops, and expert guidance on admissions, scholarships, and career pathways. Organized by Gulf News, the UAE’s most trusted media house, this event empowers the youth of Dubai with global academic opportunities and career insights.",
+  category: "Exhibition",
+  image: "/images/events/dubai-edu-fair.jpg",
+  website: "#",
+},
+{
+  id: 7,
+  title: "Gulf News presents India Property Show",
+  date: "15-16 November, 2025",
+  location: "Singapore",
+  description:
+    "The India Property Show in Singapore brings together top Indian real estate developers under one roof, offering NRIs and global investors exclusive opportunities to explore residential and commercial properties across India. From luxury apartments to affordable housing and investment-ready plots, the exhibition provides transparent insights into India’s booming real estate sector. Visitors can interact directly with developers, explore financing options, and attend expert-led sessions on investment trends, property laws, and market forecasts. Backed by Gulf News Media, this exhibition strengthens the bridge between Singapore’s NRI community and India’s vibrant property market.",
+  category: "Exhibition",
+  image: "/images/events/singapore-ips.jpg",
+  website: "#",
+},
+{
+  id: 8,
+  title: "India Edu-Fair",
+  date: "22-23 November, 2025",
+  location: "Abu Dhabi",
+  description:
+    "The India Edu-Fair in Abu Dhabi is a flagship education event that connects students with top Indian and international universities. Over two days, attendees can explore undergraduate, postgraduate, and professional programs, gain insights into scholarships, and receive one-on-one counseling from education experts. The fair also highlights career readiness programs and skill development opportunities tailored for the global job market. As part of Gulf News’ prestigious event portfolio, the Abu Dhabi Edu-Fair is a must-visit for students and families seeking quality education and career planning in the UAE.",
+  category: "Exhibition",
+  image: "/images/events/abudhabi-edu-fair.jpg",
+  website: "#",
+},
+{
+  id: 9,
+  title: "Gulf News presents India Property Show",
+  date: "06-07 December, 2025",
+  location: "Dubai",
+  description:
+    "The India Property Show in Dubai is the ultimate destination for NRIs and global investors interested in India’s thriving real estate market. Showcasing premium residential, commercial, and investment properties from across India, the exhibition attracts top developers, financial institutions, and legal experts. Attendees gain exclusive insights into high-return projects, government policies, and financing solutions. Organized by Gulf News, this event is renowned for its credibility and scale, making it the go-to platform for buyers, investors, and industry professionals in the Gulf region.",
+  category: "Exhibition",
+  image: "/images/events/dubai-ips.jpg",
+  website: "#",
+},
+
+            {
       id: 5,
       title: "ASIA Health-5 ",
       date: "December 2nd , 3rd and 4th 2025",
@@ -83,6 +128,7 @@ export default function Home() {
       image: "/images/events/health5.jpg",
       website: "#",
     },
+            
 
 
   ]
